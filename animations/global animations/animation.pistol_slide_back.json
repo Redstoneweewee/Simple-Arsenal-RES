@@ -1,0 +1,17 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.pistol_slide_back": {
+			"loop": true,
+			"override_previous_animation": true,
+			"bones": {
+				"gun_body": {
+					"position": [0, 0, 1.75]
+				},
+				"hammer": {
+					"rotation": [-82.5, 0, 0]
+				}
+			}
+		}
+	}
+}

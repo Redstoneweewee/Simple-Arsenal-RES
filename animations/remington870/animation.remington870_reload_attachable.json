@@ -1,0 +1,50 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.remington870_reload_attachable1": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 1,
+			"override_previous_animation": true,
+			"anim_time_update": "q.is_in_ui || (v.is_paperdoll??0) ? 9999999 : q.anim_time + q.delta_time",
+			"bones": {
+				"leftItem": {
+					"scale": {
+						"0.0": [0, 0, 0],
+						"0.08": {
+							"pre": [0, 0, 0],
+							"post": [0, 0, 0]
+						},
+						"0.12": {
+							"pre": [0, 0, 0],
+							"post": [1, 1, 1]
+						},
+						"0.32": {
+							"pre": [1, 1, 1],
+							"post": [1, 1, 1]
+						},
+						"0.36": {
+							"pre": [1, 1, 1],
+							"post": [0, 0, 0]
+						}
+					}
+				}
+			}
+		},
+		"animation.remington870_reload_attachable2": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 1.04,
+			"override_previous_animation": true,
+			"anim_time_update": "q.is_in_ui || (v.is_paperdoll??0) ? 9999999 : q.anim_time + q.delta_time",
+			"bones": {
+				"leftItem": {
+					"scale": {
+						"0.48": [1, 1, 1],
+						"0.52": {"pre": [1, 1, 1], "post": [0, 0, 0]},
+						"1.0": {"pre": [0, 0, 0], "post": [0, 0, 0]},
+						"1.04": {"pre": [0, 0, 0], "post": [1, 1, 1]}
+					}
+				}
+			}
+		}
+	}
+}

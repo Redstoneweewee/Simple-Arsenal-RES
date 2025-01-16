@@ -1,0 +1,31 @@
+{
+	"format_version" : "1.10.0",
+	"animation_controllers" : {
+		"controller.animation.player.slide_move" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"ak47_hold_state" : "v.slide_int == 1"
+						}
+					]
+				},
+
+
+
+
+				"ak47_hold_state" : {
+					"animations" : [
+						"slide_animation"
+					],
+					"transitions" : [
+						{
+							"default" : "q.all_animations_finished"
+						}
+					]
+				}
+			}
+		}
+	}
+}

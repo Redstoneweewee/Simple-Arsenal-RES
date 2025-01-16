@@ -1,0 +1,355 @@
+{
+	"format_version" : "1.10.0",
+	"animation_controllers" : {
+		"controller.animation.player.guns" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"ak47_hold_state" : "variable.ak47_hold"
+						},
+						{
+							"ak47_hipfire_state" : "(variable.ak47_hipfire || variable.holding_explosive_weapon)"
+						},
+						{
+							"ak47_ads_state" : "variable.ak47_ads"
+						}
+					]
+				},
+
+
+
+
+				"ak47_hold_state" : {
+					"animations" : [
+						{ "weapon_hold_first_person": "v.is_first_person" },
+						{ "ak47_hold_normalize": "v.is_first_person" },
+						{ "ak47_hold": "1" }
+					],
+					"transitions" : [
+						{
+							"ak47_hipfire_state" : "variable.ak47_hipfire || variable.holding_explosive_weapon"
+						},
+						{
+							"ak47_ads_state" : "variable.ak47_ads"
+						},
+						{
+							"ak47_hold_to_reload_state" : "v.reloading_int == 1 && variable.ak47_hold"
+						},
+						{
+							"default" : "!variable.ak47_hold"
+						}
+					]
+				},
+				"ak47_ads_to_hold_state" : {
+					"animations" : [
+						{ "weapon_hold_first_person": "v.is_first_person" },
+						{ "ak47_ads_back_normalize": "v.is_first_person" },
+						{ "weapon_hold_crouch_normalize_back": "!v.is_first_person" },
+						{ "ak47_ads_back": "1" }
+					],
+					"transitions" : [
+						{
+							"ak47_ads_state" : "variable.ak47_ads"
+						},
+						{
+							"ak47_hipfire_state" : "variable.ak47_hipfire || variable.holding_explosive_weapon"
+						},
+						{
+							"ak47_hold_to_reload_state" : "v.reloading_int == 1 && variable.ak47_hold"
+						},
+						{
+							"default" : "!variable.ak47_hold"
+						}
+					]
+				},
+				"ak47_hipfire_to_hold_state" : {
+					"animations" : [
+						{ "weapon_hold_first_person": "v.is_first_person" },
+						{ "ak47_hipfire_back_normalize": "v.is_first_person" },
+						{ "weapon_hold_crouch_normalize_back": "!v.is_first_person" },
+						{ "ak47_hipfire_back": "1" }
+					],
+					"transitions" : [
+						{
+							"ak47_ads_state" : "variable.ak47_ads"
+						},
+						{
+							"ak47_hipfire_state" : "variable.ak47_hipfire || variable.holding_explosive_weapon"
+						},
+						{
+							"ak47_hold_to_reload_state" : "v.reloading_int == 1 && variable.ak47_hold"
+						},
+						{
+							"default" : "!variable.ak47_hold"
+						}
+					]
+				},
+
+
+
+
+
+
+
+				"ak47_hipfire_state" : {
+					"animations" : [
+						{ "weapon_hold_first_person": "v.is_first_person" },
+						{ "ak47_hipfire_normalize": "v.is_first_person" },
+						{ "weapon_hold_crouch_normalize": "!v.is_first_person" },
+						{ "ak47_hipfire": "1" }
+					],
+					"transitions" : [
+						{
+							"ak47_hipfire_to_reload_state" : "(v.reloading_int == 1 && variable.ak47_hipfire) || (v.reloading_int == 1 && variable.holding_explosive_weapon)"
+						},
+						{
+							"ak47_hipfire_to_hold_state" : "variable.ak47_hold"
+						},
+						{
+							"ak47_hipfire_to_ads_state" : "variable.ak47_ads"
+						},
+						{
+							"default" : "!variable.ak47_hipfire && !variable.holding_explosive_weapon"
+						}
+					]
+				},
+				"ak47_hipfire_to_hipfire_state" : {
+					"animations" : [
+						{ "weapon_hold_first_person": "v.is_first_person" },
+						{ "ak47_hipfire_hold_normalize": "v.is_first_person" },
+						{ "weapon_hold_crouch_normalize": "!v.is_first_person" },
+						{ "ak47_hipfire_hold": "1" }
+					],
+					"transitions" : [
+						{
+							"ak47_hipfire_to_reload_state" : "(v.reloading_int == 1 && variable.ak47_hipfire) || (v.reloading_int == 1 && variable.holding_explosive_weapon)"
+						},
+						{
+							"ak47_hipfire_to_hold_state" : "variable.ak47_hold"
+						},
+						{
+							"ak47_hipfire_to_ads_state" : "variable.ak47_ads"
+						},
+						{
+							"default" : "!variable.ak47_hipfire && !variable.holding_explosive_weapon"
+						}
+					]
+				},
+				"ak47_ads_to_hipfire_state" : {
+					"animations" : [
+						{ "weapon_hold_first_person": "v.is_first_person" },
+						{ "ak47_ads_to_hipfire_normalize": "v.is_first_person" },
+						{ "weapon_hold_crouch_normalize_cont": "!v.is_first_person" },
+						{ "ak47_ads_to_hipfire": "1" }
+					],
+					"transitions" : [
+						{
+							"ak47_hipfire_to_reload_state" : "v.reloading_int == 1 && variable.ak47_hipfire"
+						},
+						{
+							"ak47_hipfire_to_hold_state" : "variable.ak47_hold"
+						},
+						{
+							"ak47_hipfire_to_ads_state" : "variable.ak47_ads"
+						},
+						{
+							"default" : "!variable.ak47_hipfire"
+						}
+					]
+				},
+
+
+
+
+
+
+
+
+
+				"ak47_ads_state" : {
+					"animations" : [
+						{ "weapon_hold_first_person": "v.is_first_person" },
+						{ "ak47_ads_normalize": "v.is_first_person" },
+						{ "weapon_hold_crouch_normalize": "!v.is_first_person" },
+						{ "ak47_ads": "1" }
+					],
+					"transitions" : [
+						{
+							"ak47_ads_to_reload_state" : "v.reloading_int == 1 && variable.ak47_ads"
+						},
+						{
+							"ak47_ads_to_hold_state" : "variable.ak47_hold"
+						},
+						{
+							"ak47_ads_to_hipfire_state" : "variable.ak47_hipfire"
+						},
+						{
+							"default" : "!variable.ak47_ads"
+						}
+					] 
+				},
+				"ak47_hipfire_to_ads_state" : {
+					"animations" : [
+						{ "weapon_hold_first_person": "v.is_first_person" },
+						{ "ak47_hipfire_to_ads_normalize": "v.is_first_person" },
+						{ "weapon_hold_crouch_normalize_cont": "!v.is_first_person" },
+						{ "ak47_hipfire_to_ads": "1" }
+					],
+					"transitions" : [
+						{
+							"ak47_ads_to_reload_state" : "v.reloading_int == 1 && variable.ak47_ads"
+						},
+						{
+							"ak47_ads_to_hold_state" : "variable.ak47_hold"
+						},
+						{
+							"ak47_ads_to_hipfire_state" : "variable.ak47_hipfire"
+						},
+						{
+							"default" : "!variable.ak47_ads"
+						}
+					]
+				},
+
+
+
+
+
+
+
+
+
+				
+				"ak47_hold_to_reload_state" : {
+					"animations" : [
+						{ "weapon_hold_first_person": "v.is_first_person" },
+						{ "weapon_hold_crouch_normalize_back": "!v.is_first_person" },
+						{ "ak47_hold_to_reload_normalize": 				"query.is_item_name_any('slot.weapon.mainhand', 'yes:ak47', 'yes:empty_ak47') && v.is_first_person" },
+						{ "ak47_hold_to_reload_normalize": 				"query.is_item_name_any('slot.weapon.mainhand', 'yes:ar15', 'yes:empty_ar15') && v.is_first_person" },
+						{ "p90_hold_to_reload_normalize": 				"query.is_item_name_any('slot.weapon.mainhand', 'yes:p90', 'yes:empty_p90') && v.is_first_person" },
+						{ "desert_eagle_hold_to_reload_normalize": 		"query.is_item_name_any('slot.weapon.mainhand', 'yes:desert_eagle', 'yes:empty_desert_eagle') && v.is_first_person" },
+						{ "ak47_hold_to_reload_normalize": 				"query.is_item_name_any('slot.weapon.mainhand', 'yes:mk13', 'yes:empty_mk13') && v.is_first_person" },
+						{ "ak47_hold_to_reload_normalize": 			"query.is_item_name_any('slot.weapon.mainhand', 'yes:ump45', 'yes:empty_ump45') && v.is_first_person" },
+						{ "ak47_hold_to_reload_normalize": 			"query.is_item_name_any('slot.weapon.mainhand', 'yes:hk417', 'yes:empty_hk417') && v.is_first_person" },
+
+						{ "ak47_hold_to_reload": 						"query.is_item_name_any('slot.weapon.mainhand', 'yes:ak47', 'yes:empty_ak47')" },
+						{ "ak47_hold_to_reload": 						"query.is_item_name_any('slot.weapon.mainhand', 'yes:ar15', 'yes:empty_ar15')" },
+						{ "p90_hold_to_reload": 						"query.is_item_name_any('slot.weapon.mainhand', 'yes:p90', 'yes:empty_p90')" },
+						{ "desert_eagle_hold_to_reload": 				"query.is_item_name_any('slot.weapon.mainhand', 'yes:desert_eagle', 'yes:empty_desert_eagle')" },
+						{ "ak47_hold_to_reload": 						"query.is_item_name_any('slot.weapon.mainhand', 'yes:mk13', 'yes:empty_mk13')" },
+						{ "ak47_hold_to_reload": 						"query.is_item_name_any('slot.weapon.mainhand', 'yes:ump45', 'yes:empty_ump45')" },
+						{ "ak47_hold_to_reload": 						"query.is_item_name_any('slot.weapon.mainhand', 'yes:hk417', 'yes:empty_hk417')" },
+
+						{ "remington870_hold_to_reload_normalize": 		"query.equipped_item_any_tag('slot.weapon.mainhand', 'yes:remington870') && !query.is_item_name_any('slot.weapon.mainhand', 'yes:remington870_5', 'yes:remington870_6') && v.is_first_person" },
+						{ "remington870_hold_to_reload_last_normalize": "v.shotgun_cont_int == 0 && query.is_item_name_any('slot.weapon.mainhand', 'yes:remington870_5', 'yes:remington870_6') && v.is_first_person" },
+						{ "remington870_reload_last_cont_normalize": 	"v.shotgun_cont_int >= 1 && query.is_item_name_any('slot.weapon.mainhand', 'yes:remington870_5', 'yes:remington870_6') && v.is_first_person" },
+						{ "remington870_hold_to_reload": 				"query.equipped_item_any_tag('slot.weapon.mainhand', 'yes:remington870') && !query.is_item_name_any('slot.weapon.mainhand', 'yes:remington870_5', 'yes:remington870_6')" },
+						{ "remington870_hold_to_reload_last": 			"v.shotgun_cont_int == 0 && query.is_item_name_any('slot.weapon.mainhand', 'yes:remington870_5', 'yes:remington870_6')" },
+						{ "remington870_reload_last_cont": 				"v.shotgun_cont_int >= 1 && query.is_item_name_any('slot.weapon.mainhand', 'yes:remington870_5', 'yes:remington870_6')" }
+					],
+					"transitions" : [
+						{
+							"ak47_hold_state" : "v.reloading_int == 0 && variable.ak47_hold"
+						},
+						{
+							"ak47_ads_state" : "v.reloading_int == 0 && variable.ak47_ads"
+						},
+						{
+							"default" : "v.reloading_int == 0 && variable.is_holding_weapon"
+						}
+					]
+				},
+				"ak47_hipfire_to_reload_state" : {
+					"animations" : [
+						{ "weapon_hold_first_person": "v.is_first_person" },
+						{ "weapon_hold_crouch_normalize_back": "!v.is_first_person" },
+						{ "ak47_hipfire_to_reload_normalize": 				"query.is_item_name_any('slot.weapon.mainhand', 'yes:ak47', 'yes:empty_ak47') && v.is_first_person" },
+						{ "ak47_hipfire_to_reload_normalize": 				"query.is_item_name_any('slot.weapon.mainhand', 'yes:ar15', 'yes:empty_ar15') && v.is_first_person" },
+						{ "p90_hipfire_to_reload_normalize": 				"query.is_item_name_any('slot.weapon.mainhand', 'yes:p90', 'yes:empty_p90') && v.is_first_person" },
+						{ "desert_eagle_hipfire_to_reload_normalize": 		"query.is_item_name_any('slot.weapon.mainhand', 'yes:desert_eagle', 'yes:empty_desert_eagle') && v.is_first_person" },
+						{ "ak47_hipfire_to_reload_normalize": 				"query.is_item_name_any('slot.weapon.mainhand', 'yes:mk13', 'yes:empty_mk13') && v.is_first_person" },
+						{ "rpg7_hipfire_to_reload_normalize": 				"query.is_item_name_any('slot.weapon.mainhand', 'yes:rpg7', 'yes:empty_rpg7') && v.is_first_person" },
+						{ "ak47_hipfire_to_reload_normalize": 				"query.is_item_name_any('slot.weapon.mainhand', 'yes:ump45', 'yes:empty_ump45') && v.is_first_person" },
+						{ "ak47_hipfire_to_reload_normalize": 				"query.is_item_name_any('slot.weapon.mainhand', 'yes:hk417', 'yes:empty_hk417') && v.is_first_person" },
+						{ "javelin_hipfire_to_reload_normalize": 			"query.is_item_name_any('slot.weapon.mainhand', 'yes:javelin', 'yes:empty_javelin') && v.is_first_person" },
+
+						{ "ak47_hipfire_to_reload": 						"query.is_item_name_any('slot.weapon.mainhand', 'yes:ak47', 'yes:empty_ak47')" },
+						{ "ak47_hipfire_to_reload": 						"query.is_item_name_any('slot.weapon.mainhand', 'yes:ar15', 'yes:empty_ar15')" },
+						{ "p90_hipfire_to_reload": 							"query.is_item_name_any('slot.weapon.mainhand', 'yes:p90', 'yes:empty_p90')" },
+						{ "desert_eagle_hipfire_to_reload": 				"query.is_item_name_any('slot.weapon.mainhand', 'yes:desert_eagle', 'yes:empty_desert_eagle')" },
+						{ "ak47_hipfire_to_reload": 						"query.is_item_name_any('slot.weapon.mainhand', 'yes:mk13', 'yes:empty_mk13')" },
+						{ "rpg7_hipfire_to_reload": 						"query.is_item_name_any('slot.weapon.mainhand', 'yes:rpg7', 'yes:empty_rpg7')" },
+						{ "ak47_hipfire_to_reload": 						"query.is_item_name_any('slot.weapon.mainhand', 'yes:ump45', 'yes:empty_ump45')" },
+						{ "ak47_hipfire_to_reload": 						"query.is_item_name_any('slot.weapon.mainhand', 'yes:hk417', 'yes:empty_hk417')" },
+						{ "javelin_hipfire_to_reload": 						"query.is_item_name_any('slot.weapon.mainhand', 'yes:javelin', 'yes:empty_javelin')" },
+
+						{ "remington870_hipfire_to_reload_normalize": 		"query.equipped_item_any_tag('slot.weapon.mainhand', 'yes:remington870') && !query.is_item_name_any('slot.weapon.mainhand', 'yes:remington870_5', 'yes:remington870_6') && v.is_first_person" },
+						{ "remington870_hipfire_to_reload_last_normalize": 	"v.shotgun_cont_int == 0 && query.is_item_name_any('slot.weapon.mainhand', 'yes:remington870_5', 'yes:remington870_6') && v.is_first_person" },
+						{ "remington870_reload_last_cont_normalize": 		"v.shotgun_cont_int >= 1 && query.is_item_name_any('slot.weapon.mainhand', 'yes:remington870_5', 'yes:remington870_6') && v.is_first_person" },
+						{ "remington870_hipfire_to_reload": 				"query.equipped_item_any_tag('slot.weapon.mainhand', 'yes:remington870') && !query.is_item_name_any('slot.weapon.mainhand', 'yes:remington870_5', 'yes:remington870_6')" },
+						{ "remington870_hipfire_to_reload_last": 			"v.shotgun_cont_int == 0 && query.is_item_name_any('slot.weapon.mainhand', 'yes:remington870_5', 'yes:remington870_6')" },
+						{ "remington870_reload_last_cont": 					"v.shotgun_cont_int >= 1 && query.is_item_name_any('slot.weapon.mainhand', 'yes:remington870_5', 'yes:remington870_6')" }
+						
+					],
+					"transitions" : [
+						{
+							"ak47_hold_state" : "v.reloading_int == 0 && variable.ak47_hold"
+						},
+						{
+							"ak47_ads_state" : "v.reloading_int == 0 && variable.ak47_ads"
+						},
+						{
+							"ak47_hipfire_to_hipfire_state" : "v.reloading_int == 0 && variable.holding_explosive_weapon"
+						},
+						{
+							"default" : "v.reloading_int == 0 && variable.is_holding_weapon"
+						}
+					]
+				},
+				"ak47_ads_to_reload_state" : {
+					"animations" : [
+						{ "weapon_hold_first_person": "v.is_first_person" },
+						{ "weapon_hold_crouch_normalize_back": "!v.is_first_person" },
+						{ "ak47_ads_to_reload_normalize": 				"query.is_item_name_any('slot.weapon.mainhand', 'yes:ak47', 'yes:empty_ak47') && v.is_first_person" },
+						{ "ak47_ads_to_reload_normalize": 				"query.is_item_name_any('slot.weapon.mainhand', 'yes:ar15', 'yes:empty_ar15') && v.is_first_person" },
+						{ "p90_ads_to_reload_normalize": 				"query.is_item_name_any('slot.weapon.mainhand', 'yes:p90', 'yes:empty_p90') && v.is_first_person" },
+						{ "desert_eagle_ads_to_reload_normalize": 		"query.is_item_name_any('slot.weapon.mainhand', 'yes:desert_eagle', 'yes:empty_desert_eagle') && v.is_first_person" },
+						{ "ak47_ads_to_reload_normalize": 				"query.is_item_name_any('slot.weapon.mainhand', 'yes:mk13', 'yes:empty_mk13') && v.is_first_person" },
+						{ "ak47_ads_to_reload_normalize": 				"query.is_item_name_any('slot.weapon.mainhand', 'yes:ump45', 'yes:empty_ump45') && v.is_first_person" },
+						{ "ak47_ads_to_reload_normalize": 				"query.is_item_name_any('slot.weapon.mainhand', 'yes:hk417', 'yes:empty_hk417') && v.is_first_person" },
+						{ "javelin_ads_to_reload_normalize": 			"query.is_item_name_any('slot.weapon.mainhand', 'yes:javelin', 'yes:empty_javelin') && v.is_first_person" },
+
+						{ "ak47_ads_to_reload": 						"query.is_item_name_any('slot.weapon.mainhand', 'yes:ak47', 'yes:empty_ak47')" },
+						{ "ak47_ads_to_reload": 						"query.is_item_name_any('slot.weapon.mainhand', 'yes:ar15', 'yes:empty_ar15')" },
+						{ "p90_ads_to_reload": 							"query.is_item_name_any('slot.weapon.mainhand', 'yes:p90', 'yes:empty_p90')" },
+						{ "desert_eagle_ads_to_reload": 				"query.is_item_name_any('slot.weapon.mainhand', 'yes:desert_eagle', 'yes:empty_desert_eagle')" },
+						{ "ak47_ads_to_reload": 						"query.is_item_name_any('slot.weapon.mainhand', 'yes:mk13', 'yes:empty_mk13')" },
+						{ "ak47_ads_to_reload": 						"query.is_item_name_any('slot.weapon.mainhand', 'yes:ump45', 'yes:empty_ump45')" },
+						{ "ak47_ads_to_reload": 						"query.is_item_name_any('slot.weapon.mainhand', 'yes:hk417', 'yes:empty_hk417')" },
+						{ "javelin_ads_to_reload": 			"query.is_item_name_any('slot.weapon.mainhand', 'yes:javelin', 'yes:empty_javelin')" },
+
+						{ "remington870_ads_to_reload_normalize": 		"query.equipped_item_any_tag('slot.weapon.mainhand', 'yes:remington870') && !query.is_item_name_any('slot.weapon.mainhand', 'yes:remington870_5', 'yes:remington870_6') && v.is_first_person" },
+						{ "remington870_ads_to_reload_last_normalize": 	"v.shotgun_cont_int == 0 && query.is_item_name_any('slot.weapon.mainhand', 'yes:remington870_5', 'yes:remington870_6') && v.is_first_person" },
+						{ "remington870_reload_last_cont_normalize": 	"v.shotgun_cont_int >= 1 && query.is_item_name_any('slot.weapon.mainhand', 'yes:remington870_5', 'yes:remington870_6') && v.is_first_person" },
+						{ "remington870_ads_to_reload": 				"query.equipped_item_any_tag('slot.weapon.mainhand', 'yes:remington870') && !query.is_item_name_any('slot.weapon.mainhand', 'yes:remington870_5', 'yes:remington870_6')" },
+						{ "remington870_ads_to_reload_last": 			"v.shotgun_cont_int == 0 && query.is_item_name_any('slot.weapon.mainhand', 'yes:remington870_5', 'yes:remington870_6')" },
+						{ "remington870_reload_last_cont": 				"v.shotgun_cont_int >= 1 && query.is_item_name_any('slot.weapon.mainhand', 'yes:remington870_5', 'yes:remington870_6')" }
+					],
+					"transitions" : [
+						{
+							"ak47_hold_state" : "v.reloading_int == 0 && variable.ak47_hold"
+						},
+						{
+							"ak47_ads_state" : "v.reloading_int == 0 && variable.ak47_ads"
+						},
+						{
+							"default" : "v.reloading_int == 0 && variable.is_holding_weapon"
+						}
+					]
+				}
+			}
+		}
+	}
+}

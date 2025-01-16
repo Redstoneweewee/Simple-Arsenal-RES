@@ -1,0 +1,15 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.gun_body": {
+			"arrays": {
+				"geometries": {
+					"array.magazine": [ "geometry.has_magazine", "geometry.no_magazine" ]
+				}
+			},
+			"textures": [ "Texture.default" ],
+			"geometry": "array.magazine[v.magazine_int]",
+			"materials": [ { "*": "Material.default" } ]
+		}
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"format_version" : "1.10.0",
+	"animation_controllers" : {
+		"controller.animation.player.test" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"shoot" : "v.is_holding_weapon"
+						}
+					]
+				},
+				"shoot" : {
+					"animations" : [
+						"gun_recoil_ak47"
+					],
+					"transitions" : [
+						{
+							"default" : "0.0"
+						}
+					]
+				}
+			}
+		}
+	}
+}

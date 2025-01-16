@@ -1,0 +1,201 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.javelin_missile.open": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 1.44,
+			"override_previous_animation": true,
+			"bones": {
+				"front_tail1": {
+					"rotation": {
+						"0.0": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.16": {
+							"post": [0, 92.5, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.2": [0, 95, 0],
+						"0.24": [0, 92.5, 0]
+					}
+				},
+				"front_tail2": {
+					"rotation": {
+						"0.04": {
+							"pre": [0, 0, 0],
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.16": {
+							"post": [0, 92.5, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.2": [0, 95, 0],
+						"0.24": [0, 92.5, 0]
+					}
+				},
+				"front_tail3": {
+					"rotation": {
+						"0.0": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.16": {
+							"post": [0, 92.5, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.2": [0, 95, 0],
+						"0.24": [0, 92.5, 0]
+					}
+				},
+				"front_tail4": {
+					"rotation": {
+						"0.04": {
+							"pre": [0, 0, 0],
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.16": {
+							"post": [0, 92.5, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.2": [0, 95, 0],
+						"0.24": [0, 92.5, 0]
+					}
+				},
+				"front_tail5": {
+					"rotation": {
+						"0.04": {
+							"pre": [0, 0, 0],
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.16": {
+							"post": [0, 92.5, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.2": [0, 95, 0],
+						"0.24": [0, 92.5, 0]
+					}
+				},
+				"front_tail6": {
+					"rotation": {
+						"0.0": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.16": {
+							"post": [0, 92.5, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.2": [0, 95, 0],
+						"0.24": [0, 92.5, 0]
+					}
+				},
+				"tail1": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.08": {
+							"pre": [0, 0, 0],
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.28": [0, 97.5, 0],
+						"0.32": [0, 100, 0],
+						"0.36": [0, 97.5, 0]
+					}
+				},
+				"tail2": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.08": {
+							"pre": [0, 0, 0],
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.28": [0, -97.5, 0],
+						"0.32": [0, -100, 0],
+						"0.36": [0, -97.5, 0]
+					}
+				},
+				"tail3": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.08": {
+							"pre": [0, 0, 0],
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.28": [0, -97.5, 0],
+						"0.32": [0, -100, 0],
+						"0.36": [0, -97.5, 0]
+					}
+				},
+				"tail4": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.08": {
+							"pre": [0, 0, 0],
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.28": [0, 97.5, 0],
+						"0.32": [0, 100, 0],
+						"0.36": [0, 97.5, 0]
+					}
+				}
+			},
+			"particle_effects": {
+				"0.44": {
+					"effect": "javelin_blast",
+					"locator": "exhaust"
+				},
+				"0.48": {
+					"effect": "javelin_blast",
+					"locator": "exhaust"
+				},
+				"0.52": {
+					"effect": "javelin_blast",
+					"locator": "exhaust"
+				},
+				"0.56": {
+					"effect": "javelin_blast",
+					"locator": "exhaust"
+				},
+				"0.6": {
+					"effect": "javelin_blast",
+					"locator": "exhaust"
+				},
+				"0.64": {
+					"effect": "javelin_blast",
+					"locator": "exhaust"
+				},
+				"0.68": {
+					"effect": "javelin_blast",
+					"locator": "exhaust"
+				},
+				"0.72": {
+					"effect": "javelin_blast",
+					"locator": "exhaust"
+				},
+				"0.76": {
+					"effect": "javelin_blast",
+					"locator": "exhaust"
+				},
+				"0.8": {
+					"effect": "javelin_blast",
+					"locator": "exhaust"
+				},
+				"0.84": {
+					"effect": "javelin_blast",
+					"locator": "exhaust"
+				},
+				"0.88": {
+					"effect": "javelin_blast",
+					"locator": "exhaust"
+				}
+			}
+		}
+	}
+}

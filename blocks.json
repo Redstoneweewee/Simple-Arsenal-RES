@@ -1,0 +1,23 @@
+{
+	"format_version": [
+		1,
+		1,
+		0
+	],
+	"yes:glowing_obsidian_block": {
+	"textures": "glowing_obsidian_block",
+	"sound": "stone"
+	},
+	"yes:glowing_obsidian_light_block": {
+	"textures": "glowing_obsidian_light_block",
+	"sound": "stone"
+	},
+	"yes:aetherium_ore": {
+	"textures": {
+		"side": "aetherium_ore_sides",
+		"up": "aetherium_ore_top",
+		"down": "aetherium_ore_bottom"
+	},
+	"sound": "stone"
+	}
+}
