@@ -21,11 +21,11 @@
                     "variable.test_var": "public"
                 },
                 "initialize": [
-                    "variable.test_var = 1;"
+                    "variable.test_var = 4;"
                 ],
                 "animate": [
                     {
-                        "test_movement": "variable.test_var"
+                        "test_movement": "variable.test_var > 0"
                     }
                 ]
             },

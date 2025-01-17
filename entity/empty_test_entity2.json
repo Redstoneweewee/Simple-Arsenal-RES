@@ -21,11 +21,14 @@
                     "variable.test_var2": "public"
                 },
                 "initialize": [
-                    "variable.test_var2 = 1;"
+                    "variable.test_var2 = 0;"
+                ],
+                "pre_animation": [
+                    "v.test_var2 = query.day;"
                 ],
                 "animate": [
                     {
-                        "test_movement": "variable.test_var2"
+                        "test_movement": "variable.test_var2 == 0.25"
                     }
                 ]
             },
