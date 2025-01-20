@@ -1,0 +1,15 @@
+{
+    "resource_pack_name": "vanilla",
+    "texture_name": "atlas.items",
+    "texture_data": {
+        "ak47": {
+            "textures": "textures/items/guns/ak47"
+        },
+        "rifle_magazine_30": {
+            "textures": "textures/items/magazines/rifle_magazine_30"
+        },
+        "rifle_magazine_50": {
+            "textures": "textures/items/magazines/rifle_magazine_50"
+        }
+    }
+}
