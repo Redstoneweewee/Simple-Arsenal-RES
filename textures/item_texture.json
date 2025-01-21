@@ -10,6 +10,18 @@
         },
         "rifle_magazine_50": {
             "textures": "textures/items/magazines/rifle_magazine_50"
+        },
+        "smg_magazine_30": {
+            "textures": "textures/items/magazines/smg_magazine_30"
+        },
+        "rifle_magazine_30_empty": {
+            "textures": "textures/items/magazines/rifle_magazine_30_empty"
+        },
+        "rifle_magazine_50_empty": {
+            "textures": "textures/items/magazines/rifle_magazine_50_empty"
+        },
+        "smg_magazine_30_empty": {
+            "textures": "textures/items/magazines/smg_magazine_30_empty"
         }
     }
 }
