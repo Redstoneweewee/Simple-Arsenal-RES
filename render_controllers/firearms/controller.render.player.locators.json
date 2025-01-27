@@ -1,0 +1,10 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.player.gun_locators": {
+			"textures": [ "Texture.default" ],
+			"geometry": "Geometry.gun_locators",
+			"materials": [ { "*": "Material.default" } ]
+		}
+	}
+}
