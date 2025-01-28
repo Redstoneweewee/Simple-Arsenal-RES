@@ -2,73 +2,18 @@
 	"format_version": "1.10.0",
 	"minecraft:attachable": {
 		"description": {
-			"identifier": "yes:ak47WER",
+			"identifier": "yes:ak47",
 			"materials": {
-				"default": "entity_alphablend",
-				"scope": "entity_emissive_alpha",
-				"enchanted": "entity_alphablend"
+				"default": "entity_alphablend"
 			},
 			"textures": {
-				"default": "textures/entity/ak47_texture_new2",
-				"scope": "textures/entity/red_dot_scope",
-				"enchanted": "textures/misc/enchanted_item_glint"
+				"default": "textures/entity/nothing"
 			},
 			"geometry": {
-				"has_magazine": "geometry.weeweejuice.ak47",
-				"scope": "geometry.weeweejuice.red_dot_scope"
-			},
-			"scripts": {
-				"initialize": [
-					"variable.wwj_bob = 0.0;",
-					"v.movement_clamp = 0.0;",
-					"v.movement_direction_value = 0.0;"
-				],
-				"pre_animation": [
-					"v.is_first_person = c.is_first_person;",
-					"v.test = c.owning_entity->v.test;",
-					"v.is_aiming            = c.owning_entity->v.is_aiming;",
-					"v.is_holding_firearm   = c.owning_entity->v.is_holding_firearm;",
-					"v.should_arm_bob       = c.owning_entity->v.should_arm_bob;",
-					"v.is_shooting          = c.owning_entity->v.is_shooting;",
-					"v.is_reloading         = c.owning_entity->v.is_reloading;",
-					"v.should_firearm_slide = c.owning_entity->v.should_firearm_slide;",
-					"v.recoil               = c.owning_entity->v.recoil;",
-					"v.movement_direction   = q.property('yes:movement_direction');",
-					"v.movement_clamp = v.movement_direction == 'left' ? v.movement_clamp-0.08 : v.movement_direction == 'right' ? v.movement_clamp+0.08 : v.movement_clamp < -0.045 ? v.movement_clamp+0.08 : v.movement_clamp > 0.045 ? v.movement_clamp-0.08 : 0;",
-					"v.movement_clamp = math.clamp(v.movement_clamp, -1, 1);",
-					"v.movement_direction_value = math.atan(3*v.movement_clamp)*6/360;",
-					"v.is_running           = c.owning_entity->v.is_running;",
-
-					"v.is_not_shooting_increment = c.owning_entity->v.is_not_shooting_increment;",
-
-					"v.rotation_offset_x  = c.owning_entity->v.rotation_offset_x;",
-					"v.rotation_offset_y  = c.owning_entity->v.rotation_offset_y;",
-					"v.rotation_offset_z  = c.owning_entity->v.rotation_offset_z;",
-					"v.transform_offset_x = c.owning_entity->v.transform_offset_x;",
-					"v.transform_offset_y = c.owning_entity->v.transform_offset_y;",
-					"v.transform_offset_z = c.owning_entity->v.transform_offset_z;",
-					"v.hand_bob = c.owning_entity->v.hand_bob;",
-					"v.tcos0 = c.owning_entity->v.tcos0;",
-					"v.first_person_rotation_factor = c.owning_entity->v.first_person_rotation_factor;"
-				],
-				"animate": [
-				  "firearms_controller"
-				]
-			},
-			"animations": {
-				"test_movement": "animation.test_entity.move",
-				"firearms_controller": "controller.animation.firearms_attachables",
-
-				"hold_first_person": "animation.hold_first_person",
-				"hold_run_first_person": "animation.hold_run_first_person",
-				"hipfire_left_first_person": "animation.hipfire_left_first_person",
-		
-        		"aim_first_person": "animation.aim_first_person",
-        		"aim_first_person2": "animation.aim_first_person2"
+				"default": "geometry.weeweejuice.nothing"
 			},
 			"render_controllers": [
-				"controller.render.gun_body_normal",
-				"controller.render.scope"
+				"controller.render.default"
 			]
 		}
 	}

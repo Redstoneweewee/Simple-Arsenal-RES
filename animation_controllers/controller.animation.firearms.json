@@ -85,7 +85,7 @@
 				},
 				"hipfire_state" : {
 					"animations" : [
-						{ "hipfire_left_first_person": "v.is_first_person" }
+						{ "hipfire_first_person": "v.is_first_person" }
 					],
                     "blend_transition": 0.15,
                     "blend_via_shortest_path": true,

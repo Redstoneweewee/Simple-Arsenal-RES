@@ -1,5 +1,5 @@
 {
-	"format_version": "1.16.0",
+	"format_version": "1.12.0",
 	"minecraft:geometry": [
 		{
 			"description": {
@@ -31,13 +31,23 @@
 					"pivot": [-6, 9.245, -5.115]
 				},
 				{
-					"name": "arm_scope_pivot",
+					"name": "arm_hipfire_pivot",
 					"parent": "movement",
+					"pivot": [-3, 21.5, 0]
+				},
+				{
+					"name": "arm_scope_pivot",
+					"parent": "arm_hipfire_pivot",
 					"pivot": [-6, 9.245, -5.115]
 				},
 				{
-					"name": "leftArm",
+					"name": "arm_recoil_pivot",
 					"parent": "arm_scope_pivot",
+					"pivot": [-6.025, 21.5, -2.875]
+				},
+				{
+					"name": "leftArm",
+					"parent": "arm_recoil_pivot",
 					"pivot": [5, 22, 0],
 					"cubes": [
 						{
@@ -81,7 +91,7 @@
 				},
 				{
 					"name": "rightArm",
-					"parent": "arm_scope_pivot",
+					"parent": "arm_recoil_pivot",
 					"pivot": [-5, 22, 0],
 					"cubes": [
 						{

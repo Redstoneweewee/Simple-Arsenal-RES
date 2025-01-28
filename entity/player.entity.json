@@ -18,8 +18,8 @@
         "default": "geometry.humanoid.custom",
         "arms": "geometry.weeweejuice.arms",
         "cape": "geometry.cape",
-				"red_dot_scope": "geometry.weeweejuice.red_dot_scope",
-        "ak47": "geometry.weeweejuice.ak47"
+        "ak47": "geometry.weeweejuice.ak47",
+				"red_dot_scope": "geometry.weeweejuice.red_dot_scope"
       },
       "scripts": {
         "scale": "0.9375",
@@ -54,6 +54,7 @@
           "variable.hand_bob = 0.0;",
           "variable.is_not_shooting_increment = 0.0;",
           "v.movement_clamp = 0.0;",
+          "v.movement_clamp2 = 0.0;",
           "V.movement_direction = 0.0;",
           "v.movement_direction_value = 0.0;"
         ],
@@ -69,21 +70,27 @@
           "variable.map_angle = math.clamp(1 - variable.player_x_rotation / 45.1, 0.0, 1.0);",
           "variable.item_use_normalized = query.main_hand_item_use_duration / query.main_hand_item_max_duration;",
 
+          "v.movement_direction   = q.property('yes:movement_direction');",
+          "v.movement_direction_prop_val   = q.property('yes:movement_direction_value')/2;",
+					"v.movement_clamp = v.movement_clamp+v.movement_direction_prop_val;",
+					"v.movement_clamp = math.clamp(v.movement_clamp, -1, 1);",
+					"v.movement_direction_value = math.atan(3*v.movement_clamp)*6/360;",
+					"v.movement_clamp2 = v.movement_clamp2+v.movement_direction_prop_val;",
+					"v.movement_clamp2 = math.clamp(v.movement_clamp2, -0.5, 0.5);",
+					"v.movement_direction_value_fast = math.atan(3*v.movement_clamp2)*2/360;",
+
           "v.is_aiming            = q.is_sneaking;",
           "v.is_holding_firearm   = q.equipped_item_any_tag('slot.weapon.mainhand', 'yes:is_firearm');",
+          "v.is_holding_magazine  = q.equipped_item_any_tag('slot.weapon.mainhand', 'yes:is_magazine');",
           "v.should_arm_bob       = q.property('yes:should_arm_bob');",
           "v.is_shooting          = q.property('yes:is_shooting');",
           "v.is_reloading         = q.property('yes:is_reloading');",
           "v.should_firearm_slide = q.property('yes:should_firearm_slide');",
           "v.recoil               = q.property('yes:recoil');",
-					"v.movement_clamp = v.movement_direction == 'left' ? v.movement_clamp-0.08 : v.movement_direction == 'right' ? v.movement_clamp+0.08 : v.movement_clamp < -0.045 ? v.movement_clamp+0.08 : v.movement_clamp > 0.045 ? v.movement_clamp-0.08 : 0;",
-					"v.movement_clamp = math.clamp(v.movement_clamp, -1, 1);",
-					"v.movement_direction_value = math.atan(3*v.movement_clamp)*6/360;",
           "v.is_running           = q.is_sprinting;",
 
-          "v.is_not_shooting_increment = v.is_shooting ? 0 : v.is_not_shooting_increment + 0.015;",
+          "v.is_not_shooting_increment = v.is_shooting ? 0 : v.is_not_shooting_increment + 0.012;",
 
-          "v.movement_direction   = q.property('yes:movement_direction_late');",
 
 
 
@@ -167,7 +174,7 @@
 
         "hold_first_person": "animation.hold_first_person",
         "hold_run_first_person": "animation.hold_run_first_person",
-        "hipfire_left_first_person": "animation.hipfire_left_first_person",
+        "hipfire_first_person": "animation.hipfire_first_person",
 
         "aim_first_person": "animation.aim_first_person"
       },
@@ -182,15 +189,51 @@
           "controller.render.player.map": "variable.map_face_icon"
         },
         {
-          "controller.render.player.arms": "v.is_holding_firearm && v.is_first_person"
+          "controller.render.player.arms": "(v.is_holding_firearm || v.is_holding_magazine) && v.is_first_person"
         },
         {
-          "controller.render.ak47": "v.is_holding_firearm && q.equipped_item_any_tag('slot.weapon.mainhand', 'yes:ak47')"
+          "controller.render.ak47": "q.equipped_item_any_tag('slot.weapon.mainhand', 'yes:ak47')"
         },
         {
           "controller.render.red_dot_scope": "v.is_holding_firearm"
         }
       ],
+      "particle_effects": {
+          "muzzle_flash": "yes:muzzle_flash",
+          "muzzle_blast": "yes:muzzle_blast",
+          "bullet_casing": "yes:bullet_casing",
+          "sniper_bullet_casing": "yes:sniper_bullet_casing",
+          "shotgun_casing": "yes:shotgun_casing",
+
+          "breech_flash": "yes:breech_flash",
+          "rpg_smoke": "yes:rpg_smoke",
+          "rpg_blast": "yes:rpg_blast",
+          "rpg_blast2": "yes:rpg_blast2"
+      },
+      "sound_effects": {
+        "ak47_shoot": "gun.yes.ak47_shoot",
+        "ak47_reload": "gun.yes.ak47_reload",
+        "ar15_shoot": "gun.yes.ar15_shoot",
+        "ar15_reload": "gun.yes.ar15_reload",
+        "hk417_shoot": "gun.yes.hk417_shoot",
+        "hk417_reload": "gun.yes.hk417_reload",
+        "p90_shoot": "gun.yes.p90_shoot",
+        "p90_reload": "gun.yes.p90_reload",
+        "ump45_shoot": "gun.yes.ump45_shoot",
+        "ump45_reload": "gun.yes.ump45_reload",
+        "desert_eagle_shoot": "gun.yes.desert_eagle_shoot",
+        "desert_eagle_reload": "gun.yes.desert_eagle_reload",
+        "mk13_shoot": "gun.yes.mk13_shoot",
+        "mk13_reload": "gun.yes.mk13_reload",
+        "mk13_bolt": "gun.yes.mk13_bolt",
+        "mk13_scope_in": "gun.yes.mk13_scope_in",
+        "mk13_scope_out": "gun.yes.mk13_scope_out",
+        "remington870_shoot": "gun.yes.remington870_shoot",
+        "remington870_reload": "gun.yes.remington870_reload",
+        "remington870_pump": "gun.yes.remington870_pump",
+        "rpg7_shoot": "gun.yes.rpg7_shoot",
+        "rpg7_reload": "gun.yes.rpg7_reload"
+      },
       "enable_attachables": true
     }
   }
