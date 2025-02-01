@@ -31,8 +31,13 @@
 					"pivot": [-6, 9.245, -5.115]
 				},
 				{
-					"name": "arm_hipfire_pivot",
+					"name": "arm_rotate_pivot",
 					"parent": "movement",
+					"pivot": [4, 16.5, 0.5]
+				},
+				{
+					"name": "arm_hipfire_pivot",
+					"parent": "arm_rotate_pivot",
 					"pivot": [-3, 21.5, 0]
 				},
 				{
@@ -46,13 +51,13 @@
 					"pivot": [-6.025, 21.5, -2.875]
 				},
 				{
-					"name": "rightArm",
+					"name": "rightArm_custom",
 					"parent": "arm_recoil_pivot",
 					"pivot": [-5, 22, 0]
 				},
 				{
 					"name": "rightItem",
-					"parent": "rightArm",
+					"parent": "rightArm_custom",
 					"pivot": [-6, 15, 1],
 					"locators": {
 						"muzzle": {

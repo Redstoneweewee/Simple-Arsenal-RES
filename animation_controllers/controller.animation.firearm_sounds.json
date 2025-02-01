@@ -1,0 +1,15 @@
+{
+	"format_version" : "1.10.0",
+	"animation_controllers" : {
+		"controller.animation.firearm_sounds" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"animations" : [
+						{ "rifle_reload_magazine_out_light": "v.test == 1" }
+					]
+				}
+			}
+		}
+	}
+}

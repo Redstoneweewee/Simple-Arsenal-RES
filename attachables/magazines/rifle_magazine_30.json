@@ -20,7 +20,7 @@
 				],
 				"pre_animation": [
 					"v.is_holding_firearm = c.owning_entity->q.equipped_item_any_tag('slot.weapon.mainhand', 'yes:is_firearm');",
-					"v.difference_counter = v.is_holding_firearm == 1.0 ? v.difference_counter + 0.01 : v.is_holding_firearm == 0.0 ? v.difference_counter - 0.01 : 1;",
+					"v.difference_counter = v.is_holding_firearm == 1.0 ? v.difference_counter + 0.12 : v.is_holding_firearm == 0.0 ? v.difference_counter - 0.12 : 1;",
 					"v.difference_counter = math.clamp(v.difference_counter, 0, 1);",
 					"v.is_holding_firearm_late = math.ceil(v.difference_counter);"
 				],

@@ -7,13 +7,13 @@
 				"default" : {
 					"animations" : [
 						{
-							"invisible": "(v.is_holding_firearm??1)"
+							"invisible": "v.is_holding_firearm_late"
 						},
 						{
-							"right_hand_visible": "!(v.is_holding_firearm_late??1) && c.item_slot == 'main_hand'"
+							"right_hand_visible": "!v.is_holding_firearm_late && c.item_slot == 'main_hand'"
 						},
 						{
-							"left_hand_visible": "!(v.is_holding_firearm_late??1) && c.item_slot == 'off_hand'"
+							"left_hand_visible": "!v.is_holding_firearm_late && c.item_slot == 'off_hand'"
 						}
 					]
 				}

@@ -5,6 +5,7 @@
       "identifier": "minecraft:player",
       "materials": {
         "default": "entity_alphatest",
+				"firearm": "entity_alphablend",
         "cape": "entity_alphatest",
         "animated": "player_animated",
 				"scope": "entity_emissive_alpha"
@@ -52,11 +53,14 @@
           "variable.is_blinking = 0.0;",
           "variable.last_blink_time = 0.0;",
           "variable.hand_bob = 0.0;",
-          "variable.is_not_shooting_increment = 0.0;",
+          "variable.is_not_shooting_increment = 1.0;",
           "v.movement_clamp = 0.0;",
           "v.movement_clamp2 = 0.0;",
           "V.movement_direction = 0.0;",
-          "v.movement_direction_value = 0.0;"
+          "v.movement_direction_value = 0.0;",
+          "v.reload_normal_animation_multiplier = 1.0;",
+          "v.reload_no_swap_animation_multiplier = 1.0;",
+          "v.reload_cock_animation_multiplier = 1.0;"
         ],
         "pre_animation": [
           "variable.helmet_layer_visible = 1.0;",
@@ -64,14 +68,17 @@
           "variable.boot_layer_visible = 1.0;",
           "variable.chest_layer_visible = 1.0;",
           "variable.attack_body_rot_y = Math.sin(360*Math.sqrt(variable.attack_time)) * 5.0;",
-          "variable.tcos0 = (math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;",
+          "variable.tcos0  = (math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;",
+          "variable.tcos02 = (math.cos(query.modified_distance_moved * 38.17/2) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;",
+          "variable.tcos0_fast = (math.cos(query.modified_distance_moved * 38.17*1.5) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;",
+          "variable.tcos02_fast = (math.cos(query.modified_distance_moved * 38.17*0.75) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;",
           "variable.first_person_rotation_factor = math.sin((1 - variable.attack_time) * 180.0);",
           "variable.hand_bob = query.life_time <0.01 ? 0.0 : variable.hand_bob + ((query.is_on_ground && query.is_alive ? math.clamp(math.sqrt(math.pow(query.position_delta(0), 2.0) + math.pow(query.position_delta(2), 2.0)), 0.0, 0.1) : 0.0) - variable.hand_bob) * 0.02;",
           "variable.map_angle = math.clamp(1 - variable.player_x_rotation / 45.1, 0.0, 1.0);",
           "variable.item_use_normalized = query.main_hand_item_use_duration / query.main_hand_item_max_duration;",
 
           "v.movement_direction   = q.property('yes:movement_direction');",
-          "v.movement_direction_prop_val   = q.property('yes:movement_direction_value')/2;",
+          "v.movement_direction_prop_val   = q.property('yes:movement_direction_value')/1.5;",
 					"v.movement_clamp = v.movement_clamp+v.movement_direction_prop_val;",
 					"v.movement_clamp = math.clamp(v.movement_clamp, -1, 1);",
 					"v.movement_direction_value = math.atan(3*v.movement_clamp)*6/360;",
@@ -79,23 +86,24 @@
 					"v.movement_clamp2 = math.clamp(v.movement_clamp2, -0.5, 0.5);",
 					"v.movement_direction_value_fast = math.atan(3*v.movement_clamp2)*2/360;",
 
-          "v.is_aiming            = q.is_sneaking;",
-          "v.is_holding_firearm   = q.equipped_item_any_tag('slot.weapon.mainhand', 'yes:is_firearm');",
-          "v.is_holding_magazine  = q.equipped_item_any_tag('slot.weapon.mainhand', 'yes:is_magazine');",
-          "v.should_arm_bob       = q.property('yes:should_arm_bob');",
-          "v.is_shooting          = q.property('yes:is_shooting');",
-          "v.is_reloading         = q.property('yes:is_reloading');",
-          "v.should_firearm_slide = q.property('yes:should_firearm_slide');",
-          "v.recoil               = q.property('yes:recoil');",
-          "v.is_running           = q.is_sprinting;",
+          "v.is_aiming                   = q.is_sneaking;",
+          "v.is_holding_firearm          = q.equipped_item_any_tag('slot.weapon.mainhand', 'yes:is_firearm');",
+          "v.is_holding_magazine         = q.equipped_item_any_tag('slot.weapon.mainhand', 'yes:is_magazine');",
+          "v.is_holding_offhand_magazine = q.property('yes:has_offhand_magazine');",
+          "v.should_cock_on_reload       = q.property('yes:should_cock_on_reload');",
+          "v.should_arm_bob              = q.property('yes:should_arm_bob');",
+          "v.is_shooting                 = q.property('yes:is_shooting');",
+          "v.is_reloading                = q.property('yes:is_reloading');",
+          "v.should_firearm_slide        = q.property('yes:should_firearm_slide');",
+          "v.recoil                      = q.property('yes:recoil');",
+          "v.is_running                  = q.is_sprinting;",
 
-          "v.is_not_shooting_increment = v.is_shooting ? 0 : v.is_not_shooting_increment + 0.012;",
-
-
-
-
+          "v.is_not_shooting_increment = v.is_shooting ? 0 : v.is_not_shooting_increment >= 1 ? 1 : v.is_not_shooting_increment + 0.008;",
           
-          "v.test = 0;",
+          "v.reload_normal_animation_multiplier  = q.property('yes:reload_normal_animation_multiplier');",
+          "v.reload_no_swap_animation_multiplier = q.property('yes:reload_no_swap_animation_multiplier');",
+          "v.reload_cock_animation_multiplier    = q.property('yes:reload_cock_animation_multiplier');",
+
           "v.rotation_offset_x = q.property('yes:rotation_offset_x')/100;",
           "v.rotation_offset_y = q.property('yes:rotation_offset_y')/100;",
           "v.rotation_offset_z = q.property('yes:rotation_offset_z')/100;",
@@ -109,6 +117,18 @@
           },
           {
             "first_person_base": "v.is_first_person && v.is_holding_firearm"
+          },
+          {
+            "hide_arms": "v.is_holding_firearm"
+          },
+          {
+            "hide_magazines": "v.is_holding_firearm && !v.is_reloading"
+          },
+          {
+            "hide_firearm_magazine": "v.is_holding_firearm && !v.is_holding_offhand_magazine && !v.is_reloading"
+          },
+          {
+            "third_person_no_crouch": "!v.is_first_person && v.is_holding_firearm"
           },
           "firearms_controller"
         ]
@@ -168,15 +188,33 @@
         
         "test_movement": "animation.test_entity.move",
 				"first_person_base": "animation.first_person_base",
+        "third_person_no_crouch": "animation.third_person_no_crouch",
+				"hide_arms": "animation.hide_arms",
+        "hide_magazines": "animation.hide_magazines",
+        "hide_firearm_magazine": "animation.hide_firearm_magazine",
 
         "first_person_base_controller": "controller.animation.first_person_base",
         "firearms_controller": "controller.animation.firearms",
+        "firearm_sounds_controller": "controller.animation.firearm_sounds",
 
         "hold_first_person": "animation.hold_first_person",
+        "hold_third_person": "animation.hold_third_person",
         "hold_run_first_person": "animation.hold_run_first_person",
+        "hold_run_third_person": "animation.hold_run_third_person",
         "hipfire_first_person": "animation.hipfire_first_person",
+        "hipfire_third_person": "animation.hipfire_third_person",
 
-        "aim_first_person": "animation.aim_first_person"
+        "aim_first_person": "animation.aim_first_person",
+        "aim_third_person": "animation.aim_third_person",
+        
+        "reload_rifle_swap_first_person": "animation.reload_rifle_swap_first_person",
+        "reload_rifle_no_swap_first_person": "animation.reload_rifle_no_swap_first_person",
+        "reload_rifle_cock_first_person": "animation.reload_rifle_cock_first_person",
+        
+        "reload_rifle_swap_third_person": "animation.reload_rifle_swap_third_person",
+        "reload_rifle_no_swap_third_person": "animation.reload_rifle_no_swap_third_person",
+        "reload_rifle_cock_third_person": "animation.reload_rifle_cock_third_person"
+
       },
       "render_controllers": [
         {
@@ -189,7 +227,7 @@
           "controller.render.player.map": "variable.map_face_icon"
         },
         {
-          "controller.render.player.arms": "(v.is_holding_firearm || v.is_holding_magazine) && v.is_first_person"
+          "controller.render.player.arms": "v.is_holding_firearm || (v.is_holding_magazine && variable.is_first_person)"
         },
         {
           "controller.render.ak47": "q.equipped_item_any_tag('slot.weapon.mainhand', 'yes:ak47')"

@@ -4,7 +4,7 @@
 		"controller.render.ak47": {
 			"textures": [ "Texture.ak47" ],
 			"geometry": "Geometry.ak47",
-			"materials": [ { "*": "Material.default" } ]
+			"materials": [ { "*": "Material.firearm" } ]
 		}
 	}
 }
