@@ -26,50 +26,60 @@
 					"pivot": [0, 24, 0]
 				},
 				{
-					"name": "head",
-					"parent": "waist",
-					"pivot": [0, 24, 0]
+					"name": "movement",
+					"parent": "body",
+					"pivot": [-6, 9.245, -5.115]
 				},
 				{
-					"name": "leftArm",
-					"parent": "waist",
-					"pivot": [5, 22, 0]
+					"name": "arm_rotate_pivot",
+					"parent": "movement",
+					"pivot": [4, 16.5, 0.5]
 				},
 				{
-					"name": "leftItem",
-					"parent": "leftArm",
-					"pivot": [6, 15, 1]
+					"name": "arm_hipfire_pivot",
+					"parent": "arm_rotate_pivot",
+					"pivot": [-3, 21.5, 0]
 				},
 				{
-					"name": "rightArm",
-					"parent": "waist",
+					"name": "arm_scope_pivot",
+					"parent": "arm_hipfire_pivot",
+					"pivot": [-6, 9.245, -5.115]
+				},
+				{
+					"name": "arm_recoil_pivot",
+					"parent": "arm_scope_pivot",
+					"pivot": [-6.025, 21.5, -2.875]
+				},
+				{
+					"name": "rightArm_custom",
+					"parent": "arm_recoil_pivot",
 					"pivot": [-5, 22, 0]
 				},
 				{
 					"name": "rightItem",
-					"parent": "rightArm",
+					"parent": "rightArm_custom",
 					"pivot": [-6, 15, 1]
 				},
 				{
 					"name": "weapon_root",
 					"parent": "rightItem",
-					"pivot": [-6, 14, 0],
+					"pivot": [-5.70781, 13.75, -0.275],
 					"rotation": [90, 0, 0]
 				},
 				{
 					"name": "sniper_scope",
 					"parent": "weapon_root",
-					"pivot": [-6.2875, 18.20896, -2.68594]
+					"pivot": [-5.99531, 17.95896, -2.71094]
 				},
 				{
 					"name": "dot",
 					"parent": "sniper_scope",
-					"pivot": [-6.05505, 15.27188, 0.91406],
+					"pivot": [-5.76286, 15.02188, -1.11094],
 					"cubes": [
 						{
-							"origin": [-6.29995, 18.82296, -2.77381],
+							"origin": [-6.00776, 18.57296, -4.79881],
 							"size": [0.05466, 0.01987, 0.02981],
-							"pivot": [-6.29619, 18.83411, -2.68437],
+							"pivot": [-6.004, 18.58411, -4.70937],
 							"rotation": [0, 0, 45],
 							"uv": {
 								"north": {"uv": [127, 0], "uv_size": [1, 1]},
@@ -81,7 +91,7 @@
 							}
 						},
 						{
-							"origin": [-6.29772, 18.3734, -2.77381],
+							"origin": [-6.00553, 18.1234, -4.79881],
 							"size": [0.00994, 0.40992, 0.02981],
 							"uv": {
 								"north": {"uv": [127, 1], "uv_size": [1, 127]},
@@ -93,7 +103,7 @@
 							}
 						},
 						{
-							"origin": [-6.32356, 18.74357, -2.77381],
+							"origin": [-6.03137, 18.49357, -4.79881],
 							"size": [0.06161, 0.00745, 0.02981],
 							"uv": {
 								"north": {"uv": [127, 7], "uv_size": [1, 1]},
@@ -105,7 +115,7 @@
 							}
 						},
 						{
-							"origin": [-6.32108, 18.68891, -2.77381],
+							"origin": [-6.02889, 18.43891, -4.79881],
 							"size": [0.05664, 0.00745, 0.02981],
 							"uv": {
 								"north": {"uv": [127, 26], "uv_size": [1, 1]},
@@ -117,7 +127,7 @@
 							}
 						},
 						{
-							"origin": [-6.31859, 18.61686, -2.77381],
+							"origin": [-6.0264, 18.36686, -4.79881],
 							"size": [0.05167, 0.00745, 0.02981],
 							"uv": {
 								"north": {"uv": [127, 45], "uv_size": [1, 1]},
@@ -129,7 +139,7 @@
 							}
 						},
 						{
-							"origin": [-6.31362, 18.53736, -2.77381],
+							"origin": [-6.02143, 18.28736, -4.79881],
 							"size": [0.04174, 0.00745, 0.02981],
 							"uv": {
 								"north": {"uv": [127, 72], "uv_size": [1, 1]},
@@ -141,7 +151,7 @@
 							}
 						},
 						{
-							"origin": [-6.30866, 18.3734, -2.77381],
+							"origin": [-6.01647, 18.1234, -4.79881],
 							"size": [0.0318, 0.00745, 0.02981],
 							"uv": {
 								"north": {"uv": [127, 127], "uv_size": [1, 1]},
@@ -153,9 +163,9 @@
 							}
 						},
 						{
-							"origin": [-6.32771, 18.79315, -2.77381],
+							"origin": [-6.03552, 18.54315, -4.79881],
 							"size": [0.05466, 0.01987, 0.02981],
-							"pivot": [-6.31898, 18.80429, -2.68437],
+							"pivot": [-6.02679, 18.55429, -4.70937],
 							"rotation": [0, 0, -45],
 							"uv": {
 								"north": {"uv": [127, 0], "uv_size": [1, 1]},
@@ -167,16 +177,6 @@
 							}
 						}
 					]
-				},
-				{
-					"name": "rightLeg",
-					"parent": "root",
-					"pivot": [-1.9, 12, 0]
-				},
-				{
-					"name": "leftLeg",
-					"parent": "root",
-					"pivot": [1.9, 12, 0]
 				}
 			]
 		}

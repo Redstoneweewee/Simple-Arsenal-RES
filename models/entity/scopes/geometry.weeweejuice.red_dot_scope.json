@@ -58,17 +58,7 @@
 				{
 					"name": "rightItem",
 					"parent": "rightArm_custom",
-					"pivot": [-6, 15, 1],
-					"locators": {
-						"muzzle": {
-							"offset": [-6.3, -5.45, -2.575],
-							"rotation": [180, 0, 0]
-						},
-						"shell_eject": {
-							"offset": [-6.52855, 10.14645, -3.175],
-							"rotation": [0, 0, 45]
-						}
-					}
+					"pivot": [-6, 15, 1]
 				},
 				{
 					"name": "weapon_root",

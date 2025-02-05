@@ -13,14 +13,26 @@
       "textures": {
         "cape": "textures/entity/cape_invisible",
 				"red_dot_scope": "textures/entity/red_dot_scope",
-        "ak47": "textures/entity/ak47_texture_new2"
+				"acog": "textures/entity/acog",
+				"sniper_scope": "textures/entity/sniper_scope",
+        "ak47": "textures/entity/ak47_texture_new2",
+        "ar15": "textures/entity/ar15_texture",
+        "hk417": "textures/entity/hk417_texture",
+        "mk13": "textures/entity/mk13_texture",
+        "ump45": "textures/entity/ump45_texture"
       },
       "geometry": {
         "default": "geometry.humanoid.custom",
         "arms": "geometry.weeweejuice.arms",
         "cape": "geometry.cape",
+				"red_dot_scope": "geometry.weeweejuice.red_dot_scope",
+				"acog": "geometry.weeweejuice.acog",
+				"sniper_scope": "geometry.weeweejuice.sniper_scope",
         "ak47": "geometry.weeweejuice.ak47",
-				"red_dot_scope": "geometry.weeweejuice.red_dot_scope"
+        "ar15": "geometry.weeweejuice.ar15",
+        "hk417": "geometry.weeweejuice.hk417",
+        "mk13": "geometry.weeweejuice.mk13",
+        "ump45": "geometry.weeweejuice.ump45"
       },
       "scripts": {
         "scale": "0.9375",
@@ -98,18 +110,22 @@
           "v.recoil                      = q.property('yes:recoil');",
           "v.is_running                  = q.is_sprinting;",
 
+          "v.is_holding_red_dot_scope_firearm = q.equipped_item_any_tag('slot.weapon.mainhand', 'yes:ak47', 'yes:ar15', 'yes:ump45');",
+          "v.is_holding_acog_firearm = q.equipped_item_any_tag('slot.weapon.mainhand', 'yes:hk417');",
+          "v.is_holding_sniper_scope_firearm = q.equipped_item_any_tag('slot.weapon.mainhand', 'yes:mk13');",
+
           "v.is_not_shooting_increment = v.is_shooting ? 0 : v.is_not_shooting_increment >= 1 ? 1 : v.is_not_shooting_increment + 0.008;",
           
           "v.reload_normal_animation_multiplier  = q.property('yes:reload_normal_animation_multiplier');",
           "v.reload_no_swap_animation_multiplier = q.property('yes:reload_no_swap_animation_multiplier');",
           "v.reload_cock_animation_multiplier    = q.property('yes:reload_cock_animation_multiplier');",
 
-          "v.rotation_offset_x = q.property('yes:rotation_offset_x')/100;",
-          "v.rotation_offset_y = q.property('yes:rotation_offset_y')/100;",
-          "v.rotation_offset_z = q.property('yes:rotation_offset_z')/100;",
-          "v.transform_offset_x = q.property('yes:transform_offset_x')/100;",
-          "v.transform_offset_y = q.property('yes:transform_offset_y')/100;",
-          "v.transform_offset_z = q.property('yes:transform_offset_z')/100;"
+          "v.rotation_offset_x = q.property('yes:rotation_offset_x')/10;",
+          "v.rotation_offset_y = q.property('yes:rotation_offset_y')/10;",
+          "v.rotation_offset_z = q.property('yes:rotation_offset_z')/10;",
+          "v.transform_offset_x = q.property('yes:transform_offset_x')/1000;",
+          "v.transform_offset_y = q.property('yes:transform_offset_y')/1000;",
+          "v.transform_offset_z = q.property('yes:transform_offset_z')/1000;"
         ],
         "animate": [
           {
@@ -204,7 +220,9 @@
         "hipfire_first_person": "animation.hipfire_first_person",
         "hipfire_third_person": "animation.hipfire_third_person",
 
-        "aim_first_person": "animation.aim_first_person",
+        "aim_red_dot_scope_first_person": "animation.aim_red_dot_scope_first_person",
+        "aim_acog_first_person": "animation.aim_acog_first_person",
+        "aim_sniper_scope_first_person": "animation.aim_sniper_scope_first_person",
         "aim_third_person": "animation.aim_third_person",
         
         "reload_rifle_swap_first_person": "animation.reload_rifle_swap_first_person",
@@ -229,12 +247,15 @@
         {
           "controller.render.player.arms": "v.is_holding_firearm || (v.is_holding_magazine && variable.is_first_person)"
         },
-        {
-          "controller.render.ak47": "q.equipped_item_any_tag('slot.weapon.mainhand', 'yes:ak47')"
-        },
-        {
-          "controller.render.red_dot_scope": "v.is_holding_firearm"
-        }
+        { "controller.render.red_dot_scope": "q.equipped_item_any_tag('slot.weapon.mainhand', 'yes:ak47', 'yes:ar15', 'yes:ump45')" },
+        { "controller.render.acog": "q.equipped_item_any_tag('slot.weapon.mainhand', 'yes:hk417')" },
+        { "controller.render.sniper_scope": "q.equipped_item_any_tag('slot.weapon.mainhand', 'yes:mk13')" },
+
+        { "controller.render.ak47":  "q.equipped_item_any_tag('slot.weapon.mainhand', 'yes:ak47')"  },
+        { "controller.render.ar15":  "q.equipped_item_any_tag('slot.weapon.mainhand', 'yes:ar15')"  },
+        { "controller.render.hk417": "q.equipped_item_any_tag('slot.weapon.mainhand', 'yes:hk417')" },
+        { "controller.render.mk13":  "q.equipped_item_any_tag('slot.weapon.mainhand', 'yes:mk13')"  },
+        { "controller.render.ump45": "q.equipped_item_any_tag('slot.weapon.mainhand', 'yes:ump45')" }
       ],
       "particle_effects": {
           "muzzle_flash": "yes:muzzle_flash",

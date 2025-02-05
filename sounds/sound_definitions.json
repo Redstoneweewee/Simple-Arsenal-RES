@@ -105,6 +105,145 @@
          ]
       },
 
+      "firearm.sniper_reload_bolt_pull_toward" : {
+         "max_distance" : 80.0,
+         "sounds" : [
+				{
+            "name": "sounds/reload/sniper/sniper_reload_bolt_pull_toward",
+            "volume" : 1.0
+            }
+         ]
+      },
+      "firearm.sniper_reload_bolt_pull_away" : {
+         "max_distance" : 80.0,
+         "sounds" : [
+				{
+            "name": "sounds/reload/sniper/sniper_reload_bolt_pull_away",
+            "volume" : 1.0
+            }
+         ]
+      },
+
+
+
+
+
+      "firearm.ak47_shoot" : {
+         "max_distance" : 200.0,
+         "sounds" : [
+				{
+            "name": "sounds/ak47/ak47_shoot",
+            "volume" : 0.8,
+            "pitch" : 1.40
+            }
+         ]
+      },
+      "firearm.ar15_shoot" : {
+         "max_distance" : 200.0,
+         "sounds" : [
+				{
+            "name": "sounds/ar15/ar15_shoot",
+            "volume" : 0.7
+            }
+         ]
+      },
+      "firearm.hk417_shoot" : {
+         "max_distance" : 200.0,
+         "sounds" : [
+				{
+            "name": "sounds/hk417/hk417_shoot",
+            "volume" : 0.85
+            }
+         ]
+      },
+      "firearm.p90_shoot" : {
+         "max_distance" : 200.0,
+         "sounds" : [
+				{
+            "name": "sounds/p90/p90_shoot",
+            "volume" : 1.2
+            }
+         ]
+      },
+      "firearm.ump45_shoot" : {
+         "max_distance" : 200.0,
+         "sounds" : [
+				{
+            "name": "sounds/ump45/ump45_shoot",
+            "volume" : 1.2
+            }
+         ]
+      },
+      "firearm.desert_eagle_shoot" : {
+         "max_distance" : 200.0,
+         "sounds" : [
+				{
+            "name": "sounds/desert_eagle/desert_eagle_shoot",
+            "volume" : 3.0
+            }
+         ]
+      },
+      "firearm.mk13_shoot" : {
+         "max_distance" : 200.0,
+         "sounds" : [
+				{
+            "name": "sounds/mk13/mk13_shoot",
+            "volume" : 3.0
+            }
+         ]
+      },
+      "firearm.remington870_shoot" : {
+         "max_distance" : 200.0,
+         "sounds" : [
+				{
+            "name": "sounds/remington870/remington870_shoot",
+            "volume" : 3.0
+            }
+         ]
+      },
+      "firearm.rpg7_shoot" : {
+         "max_distance" : 200.0,
+         "sounds" : [
+				{
+            "name": "sounds/rpg7/rpg7_shoot",
+            "volume" : 3.2
+            }
+         ]
+      },
+      "firearm.switch_firing_mode_to_semi" : {
+         "max_distance" : 200.0,
+         "sounds" : [
+				{
+            "name": "sounds/abilities/switch_firing_mode",
+            "pitch" : 1.3
+            }
+         ]
+      },
+      "firearm.switch_firing_mode_to_auto" : {
+         "max_distance" : 200.0,
+         "sounds" : [
+				{
+            "name": "sounds/abilities/switch_firing_mode",
+            "pitch" : 0.9
+            }
+         ]
+      },
+      "firearm.switch_scope_zoom_1" : {
+         "max_distance" : 200.0,
+         "sounds" : [
+				{
+            "name": "sounds/abilities/switch_scope_zoom_1"
+            }
+         ]
+      },
+      "firearm.switch_scope_zoom_2" : {
+         "max_distance" : 200.0,
+         "sounds" : [
+				{
+            "name": "sounds/abilities/switch_scope_zoom_2"
+            }
+         ]
+      },
 
 
 
@@ -131,30 +270,11 @@
             }
          ]
       },
-      "firearm.ak47_shoot" : {
-         "max_distance" : 200.0,
-         "sounds" : [
-				{
-            "name": "sounds/ak47/ak47_shoot",
-            "volume" : 0.8,
-            "pitch" : 1.40
-            }
-         ]
-      },
       "gun.yes.ak47_reload" : {
          "max_distance" : 200.0,
          "sounds" : [
 				{
             "name": "sounds/ak47/ak47_reload"
-            }
-         ]
-      },
-      "firearm.ar15_shoot" : {
-         "max_distance" : 200.0,
-         "sounds" : [
-				{
-            "name": "sounds/ar15/ar15_shoot",
-            "volume" : 0.85
             }
          ]
       },
@@ -166,29 +286,11 @@
             }
          ]
       },
-      "firearm.hk417_shoot" : {
-         "max_distance" : 200.0,
-         "sounds" : [
-				{
-            "name": "sounds/hk417/hk417_shoot",
-            "volume" : 0.85
-            }
-         ]
-      },
       "gun.yes.hk417_reload" : {
          "max_distance" : 200.0,
          "sounds" : [
 				{
             "name": "sounds/hk417/hk417_reload"
-            }
-         ]
-      },
-      "firearm.p90_shoot" : {
-         "max_distance" : 200.0,
-         "sounds" : [
-				{
-            "name": "sounds/p90/p90_shoot",
-            "volume" : 1.2
             }
          ]
       },
@@ -200,15 +302,6 @@
             }
          ]
       },
-      "firearm.ump45_shoot" : {
-         "max_distance" : 200.0,
-         "sounds" : [
-				{
-            "name": "sounds/ump45/ump45_shoot",
-            "volume" : 1.2
-            }
-         ]
-      },
       "gun.yes.ump45_reload" : {
          "max_distance" : 200.0,
          "sounds" : [
@@ -217,29 +310,11 @@
             }
          ]
       },
-      "firearm.desert_eagle_shoot" : {
-         "max_distance" : 200.0,
-         "sounds" : [
-				{
-            "name": "sounds/desert_eagle/desert_eagle_shoot",
-            "volume" : 3.0
-            }
-         ]
-      },
       "gun.yes.desert_eagle_reload" : {
          "max_distance" : 200.0,
          "sounds" : [
 				{
             "name": "sounds/desert_eagle/desert_eagle_reload"
-            }
-         ]
-      },
-      "firearm.mk13_shoot" : {
-         "max_distance" : 200.0,
-         "sounds" : [
-				{
-            "name": "sounds/mk13/mk13_shoot",
-            "volume" : 3.0
             }
          ]
       },
@@ -259,31 +334,6 @@
             }
          ]
       },
-      "gun.yes.mk13_scope_in" : {
-         "max_distance" : 200.0,
-         "sounds" : [
-				{
-            "name": "sounds/mk13/mk13_scope_in"
-            }
-         ]
-      },
-      "gun.yes.mk13_scope_out" : {
-         "max_distance" : 200.0,
-         "sounds" : [
-				{
-            "name": "sounds/mk13/mk13_scope_out"
-            }
-         ]
-      },
-      "firearm.remington870_shoot" : {
-         "max_distance" : 200.0,
-         "sounds" : [
-				{
-            "name": "sounds/remington870/remington870_shoot",
-            "volume" : 3.0
-            }
-         ]
-      },
       "gun.yes.remington870_reload" : {
          "max_distance" : 200.0,
          "sounds" : [
@@ -297,15 +347,6 @@
          "sounds" : [
 				{
             "name": "sounds/remington870/remington870_pump"
-            }
-         ]
-      },
-      "firearm.rpg7_shoot" : {
-         "max_distance" : 200.0,
-         "sounds" : [
-				{
-            "name": "sounds/rpg7/rpg7_shoot",
-            "volume" : 3.2
             }
          ]
       },
@@ -378,40 +419,6 @@
          "sounds" : [
 				{
             "name": "sounds/global/explosion"
-            }
-         ]
-      },
-      "gun.yes.gun_mode_switch_to_semi" : {
-         "max_distance" : 200.0,
-         "sounds" : [
-				{
-            "name": "sounds/hk417/gun_mode_switch2",
-            "pitch" : 1.1
-            },
-				{
-            "name": "sounds/hk417/gun_mode_switch2",
-            "pitch" : 1.15
-            },
-				{
-            "name": "sounds/hk417/gun_mode_switch2",
-            "pitch" : 1.2
-            }
-         ]
-      },
-      "gun.yes.gun_mode_switch_to_auto" : {
-         "max_distance" : 200.0,
-         "sounds" : [
-				{
-            "name": "sounds/hk417/gun_mode_switch2",
-            "pitch" : 0.78
-            },
-				{
-            "name": "sounds/hk417/gun_mode_switch2",
-            "pitch" : 0.83
-            },
-				{
-            "name": "sounds/hk417/gun_mode_switch2",
-            "pitch" : 0.9
             }
          ]
       }

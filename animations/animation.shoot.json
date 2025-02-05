@@ -1,0 +1,402 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.ar15_shoot": {
+			"animation_length": 1.5,
+			"override_previous_animation": true,
+			"anim_time_update": "q.is_in_ui || (v.is_paperdoll??0) ? 999999999 : q.anim_time + q.delta_time",
+			"bones": {
+				"arm_recoil_pivot": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.02": ["-v.recoil/70*(math.pow(((q.anim_time-1.5 > 0 ? 0 : q.anim_time-1.5)/-1.5),4))", 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.02": [
+							0,
+							"v.is_first_person ? 0.02*(v.recoil < 40 ? 40 : v.recoil)*(math.pow(((q.anim_time-1.5 > 0 ? 0 : q.anim_time-1.5)/-1.5),8)) : 0",
+							"(!v.is_first_person) ? 0.02*(v.recoil < 40 ? 40 : v.recoil)*(math.pow(((q.anim_time-1.5 > 0 ? 0 : q.anim_time-1.5)/-1.5),8)) : 0"
+						]
+					}
+				},
+				"bolt_handle": {
+					"position": {
+						"0.0": [0, 0, 1.97],
+						"0.02": {
+							"pre": [0, 0, 3.57372],
+							"post": [0, 0, 3.57372],
+							"lerp_mode": "catmullrom"
+						},
+						"0.04": {
+							"post": [0, 0, 2.745],
+							"lerp_mode": "catmullrom"
+						},
+						"0.13": [0, 0, 0]
+					}
+				}
+			},
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "muzzle_flash",
+						"locator": "ar15_muzzle"
+					},
+					{
+						"effect": "bullet_casing",
+						"locator": "ar15_shell_eject"
+					},
+					{
+						"effect": "muzzle_blast",
+						"locator": "ar15_muzzle"
+					}
+				]
+			}
+		},
+		"animation.ump45_shoot": {
+			"animation_length": 1.5,
+			"override_previous_animation": true,
+			"anim_time_update": "q.is_in_ui || (v.is_paperdoll??0) ? 999999999 : q.anim_time + q.delta_time",
+			"bones": {
+				"arm_recoil_pivot": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.02": ["-v.recoil/70*(math.pow(((q.anim_time-1.5 > 0 ? 0 : q.anim_time-1.5)/-1.5),4))", 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.02": [
+							0,
+							"v.is_first_person ? 0.02*(v.recoil < 40 ? 40 : v.recoil)*(math.pow(((q.anim_time-1.5 > 0 ? 0 : q.anim_time-1.5)/-1.5),8)) : 0",
+							"(!v.is_first_person) ? 0.02*(v.recoil < 40 ? 40 : v.recoil)*(math.pow(((q.anim_time-1.5 > 0 ? 0 : q.anim_time-1.5)/-1.5),8)) : 0"
+						]
+					}
+				},
+				"bolt_handle": {
+					"position": {
+						"0.0": [0, 0, 1.97],
+						"0.02": {
+							"pre": [0, 0, 3.57372],
+							"post": [0, 0, 3.57372],
+							"lerp_mode": "catmullrom"
+						},
+						"0.04": {
+							"post": [0, 0, 2.745],
+							"lerp_mode": "catmullrom"
+						},
+						"0.13": [0, 0, 0]
+					}
+				}
+			},
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "muzzle_flash",
+						"locator": "ump45_muzzle"
+					},
+					{
+						"effect": "bullet_casing",
+						"locator": "ump45_shell_eject"
+					},
+					{
+						"effect": "muzzle_blast",
+						"locator": "ump45_muzzle"
+					}
+				]
+			}
+		},
+		"animation.hk417_shoot": {
+			"animation_length": 1.5,
+			"override_previous_animation": true,
+			"anim_time_update": "q.is_in_ui || (v.is_paperdoll??0) ? 999999999 : q.anim_time + q.delta_time",
+			"bones": {
+				"arm_recoil_pivot": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.02": ["-v.recoil/70*(math.pow(((q.anim_time-1.5 > 0 ? 0 : q.anim_time-1.5)/-1.5),4))", 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.02": [
+							0,
+							"v.is_first_person ? 0.02*(v.recoil < 40 ? 40 : v.recoil)*(math.pow(((q.anim_time-1.5 > 0 ? 0 : q.anim_time-1.5)/-1.5),8)) : 0",
+							"(!v.is_first_person) ? 0.02*(v.recoil < 40 ? 40 : v.recoil)*(math.pow(((q.anim_time-1.5 > 0 ? 0 : q.anim_time-1.5)/-1.5),8)) : 0"
+						]
+					}
+				},
+				"bolt_handle": {
+					"position": {
+						"0.0": [0, 0, 1.97],
+						"0.02": {
+							"pre": [0, 0, 3.57372],
+							"post": [0, 0, 3.57372],
+							"lerp_mode": "catmullrom"
+						},
+						"0.04": {
+							"post": [0, 0, 2.745],
+							"lerp_mode": "catmullrom"
+						},
+						"0.13": [0, 0, 0]
+					}
+				}
+			},
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "muzzle_flash",
+						"locator": "hk417_muzzle"
+					},
+					{
+						"effect": "bullet_casing",
+						"locator": "hk417_shell_eject"
+					},
+					{
+						"effect": "muzzle_blast",
+						"locator": "hk417_muzzle"
+					}
+				]
+			}
+		},
+		"animation.ak47_shoot": {
+			"animation_length": 1.5,
+			"override_previous_animation": true,
+			"anim_time_update": "q.is_in_ui || (v.is_paperdoll??0) ? 999999999 : q.anim_time + q.delta_time",
+			"bones": {
+				"arm_recoil_pivot": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.02": ["-v.recoil/70*(math.pow(((q.anim_time-1.5 > 0 ? 0 : q.anim_time-1.5)/-1.5),4))", 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.02": [
+							0,
+							"v.is_first_person ? 0.02*(v.recoil < 40 ? 40 : v.recoil)*(math.pow(((q.anim_time-1.5 > 0 ? 0 : q.anim_time-1.5)/-1.5),8)) : 0",
+							"(!v.is_first_person) ? 0.02*(v.recoil < 40 ? 40 : v.recoil)*(math.pow(((q.anim_time-1.5 > 0 ? 0 : q.anim_time-1.5)/-1.5),8)) : 0"
+						]
+					}
+				},
+				"bolt_handle": {
+					"position": {
+						"0.0": [0, 0, 1.97],
+						"0.02": {
+							"pre": [0, 0, 3.57372],
+							"post": [0, 0, 3.57372],
+							"lerp_mode": "catmullrom"
+						},
+						"0.04": {
+							"post": [0, 0, 2.745],
+							"lerp_mode": "catmullrom"
+						},
+						"0.13": [0, 0, 0]
+					}
+				}
+			},
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "muzzle_flash",
+						"locator": "ak47_muzzle"
+					},
+					{
+						"effect": "bullet_casing",
+						"locator": "ak47_shell_eject"
+					},
+					{
+						"effect": "muzzle_blast",
+						"locator": "ak47_muzzle"
+					}
+				]
+			}
+		},
+		"animation.mk13_shoot_with_ammo": {
+			"animation_length": 1.5,
+			"anim_time_update": "q.is_in_ui || (v.is_paperdoll??0) ? 999999999 : q.anim_time + q.delta_time",
+			"bones": {
+				"arm_recoil_pivot": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.02": ["-v.recoil/70*(math.pow(((q.anim_time-1.5 > 0 ? 0 : q.anim_time-1.5)/-1.5),4))", 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.02": [
+							0,
+							"v.is_first_person ? 0.02*(v.recoil < 40 ? 40 : v.recoil)*(math.pow(((q.anim_time-1.5 > 0 ? 0 : q.anim_time-1.5)/-1.5),8))/(v.is_aiming ? 4 : 1) : 0",
+							"(!v.is_first_person) ? 0.02*(v.recoil < 40 ? 40 : v.recoil)*(math.pow(((q.anim_time-1.5 > 0 ? 0 : q.anim_time-1.5)/-1.5),8))/(v.is_aiming ? 4 : 1) : 0"
+						]
+					}
+				},
+				"leftArm_custom_pivot2": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.2": {
+							"pre": [-13.57328, 3.4159, 48.24768],
+							"post": [-13.57328, 3.4159, 48.24768],
+							"lerp_mode": "catmullrom"
+						},
+						"0.35": {
+							"post": [-17.66511, 2.88616, 46.57725],
+							"lerp_mode": "catmullrom"
+						},
+						"0.5": {
+							"post": [-15.81317, 24.06582, 38.98952],
+							"lerp_mode": "catmullrom"
+						},
+						"0.59": {
+							"post": [-15.81317, 24.06582, 38.98952],
+							"lerp_mode": "catmullrom"
+						},
+						"0.8": {
+							"post": [-17.66511, 2.88616, 46.57725],
+							"lerp_mode": "catmullrom"
+						},
+						"1.0": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.2": [2.55719, 1.18448, -0.24606],
+						"0.35": [3.02919, 1.54285, -0.3398],
+						"0.5": {
+							"pre": [2.17439, 3.33148, -1.32635],
+							"post": [2.17439, 3.33148, -1.32635],
+							"lerp_mode": "catmullrom"
+						},
+						"0.59": {
+							"post": [2.17439, 3.33148, -1.32635],
+							"lerp_mode": "catmullrom"
+						},
+						"0.8": [3.16686, 1.36556, -0.32438],
+						"1.0": [0, 0, 0]
+					}
+				},
+				"rightItem": {
+					"rotation": {
+						"0.2": [0, 0, 0],
+						"0.35": {
+							"pre": [0, -0.2, 0],
+							"post": [0, -0.2, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.54": {
+							"post": [0, -0.4, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.9": [0, 0, 0]
+					},
+					"position": {
+						"0.2": [0, 0, 0],
+						"0.35": [0, 0, 0],
+						"0.5": {
+							"pre": [-0.00104, 0.07487, -0.01028],
+							"post": [-0.00104, 0.07487, -0.01028],
+							"lerp_mode": "catmullrom"
+						},
+						"0.59": {
+							"post": [-0.00104, 0.07487, -0.01028],
+							"lerp_mode": "catmullrom"
+						},
+						"0.75": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.9": [0, 0, 0]
+					}
+				},
+				"bolt": {
+					"rotation": {
+						"0.2": [0, 0, 0],
+						"0.35": {
+							"pre": [0, 0, 45],
+							"post": [0, 0, 45],
+							"lerp_mode": "catmullrom"
+						},
+						"0.75": {
+							"post": [0, 0, 45],
+							"lerp_mode": "catmullrom"
+						},
+						"0.9": [0, 0, 0]
+					},
+					"position": {
+						"0.2": [0, 0, 0],
+						"0.35": [0, 0, 0.33],
+						"0.5": {
+							"pre": [0, 0, 2.07372],
+							"post": [0, 0, 2.07372],
+							"lerp_mode": "catmullrom"
+						},
+						"0.59": {
+							"post": [0, 0, 2.245],
+							"lerp_mode": "catmullrom"
+						},
+						"0.8": [0, 0, 0]
+					}
+				}
+			},
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "muzzle_flash",
+						"locator": "mk13_muzzle"
+					},
+					{
+						"effect": "muzzle_blast",
+						"locator": "mk13_muzzle"
+					},
+					{
+						"effect": "muzzle_blast",
+						"locator": "mk13_muzzle"
+					},
+					{
+						"effect": "muzzle_blast",
+						"locator": "mk13_muzzle"
+					}
+				],
+				"0.43": {
+					"effect": "sniper_bullet_casing",
+					"locator": "mk13_shell_eject"
+				}
+			}
+		},
+		"animation.mk13_shoot_out_of_ammo": {
+			"animation_length": 1.5,
+			"anim_time_update": "q.is_in_ui || (v.is_paperdoll??0) ? 999999999 : q.anim_time + q.delta_time",
+			"bones": {
+				"arm_recoil_pivot": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.02": ["-v.recoil/70*(math.pow(((q.anim_time-1.5 > 0 ? 0 : q.anim_time-1.5)/-1.5),4))", 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.02": [
+							0,
+							"v.is_first_person ? 0.02*(v.recoil < 40 ? 40 : v.recoil)*(math.pow(((q.anim_time-1.5 > 0 ? 0 : q.anim_time-1.5)/-1.5),8))/(v.is_aiming ? 4 : 1) : 0",
+							"(!v.is_first_person) ? 0.02*(v.recoil < 40 ? 40 : v.recoil)*(math.pow(((q.anim_time-1.5 > 0 ? 0 : q.anim_time-1.5)/-1.5),8))/(v.is_aiming ? 4 : 1) : 0"
+						]
+					}
+				}
+			},
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "muzzle_flash",
+						"locator": "mk13_muzzle"
+					},
+					{
+						"effect": "muzzle_blast",
+						"locator": "mk13_muzzle"
+					},
+					{
+						"effect": "muzzle_blast",
+						"locator": "mk13_muzzle"
+					},
+					{
+						"effect": "muzzle_blast",
+						"locator": "mk13_muzzle"
+					}
+				]
+			}
+		}
+	}
+}

@@ -123,7 +123,9 @@
 
 				"aim_state" : {
 					"animations" : [
-						{ "aim_first_person": "v.is_first_person" },
+						{ "aim_red_dot_scope_first_person": "v.is_first_person && v.is_holding_red_dot_scope_firearm" },
+						{ "aim_acog_first_person": "v.is_first_person && v.is_holding_acog_firearm" },
+						{ "aim_sniper_scope_first_person": "v.is_first_person && v.is_holding_sniper_scope_firearm" },
 						{ "aim_third_person": "!v.is_first_person" }
 					],
                     "blend_transition": 0.15,

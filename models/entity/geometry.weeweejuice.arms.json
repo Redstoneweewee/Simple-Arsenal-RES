@@ -53,6 +53,11 @@
 				{
 					"name": "leftArm_custom",
 					"parent": "arm_recoil_pivot",
+					"pivot": [5, 22, 0]
+				},
+				{
+					"name": "leftArm_custom_pivot2",
+					"parent": "leftArm_custom",
 					"pivot": [5, 22, 0],
 					"cubes": [
 						{

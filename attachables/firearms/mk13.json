@@ -1,0 +1,20 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "yes:mk13",
+			"materials": {
+				"default": "entity_alphablend"
+			},
+			"textures": {
+				"default": "textures/entity/nothing"
+			},
+			"geometry": {
+				"default": "geometry.weeweejuice.nothing"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

@@ -1,0 +1,42 @@
+{
+	"format_version": "1.20.10",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "yes:rifle_magazine_50",
+			"materials": {
+				"default": "entity_alphablend"
+			},
+			"textures": {
+				"default": "textures/entity/ak47_texture_new2"
+			},
+			"geometry": {
+				"default": "geometry.weeweejuice.rifle_magazine_30"
+			},
+			"scripts": {
+				"initialize": [
+					"v.is_holding_firearm = 1.0;",
+					"v.difference_counter = 0.0;",
+					"v.is_holding_firearm_late = 1.0;"
+				],
+				"pre_animation": [
+					"v.is_holding_firearm = c.owning_entity->q.equipped_item_any_tag('slot.weapon.mainhand', 'yes:is_firearm');",
+					"v.difference_counter = v.is_holding_firearm == 1.0 ? v.difference_counter + 0.12 : v.is_holding_firearm == 0.0 ? v.difference_counter - 0.12 : 1;",
+					"v.difference_counter = math.clamp(v.difference_counter, 0, 1);",
+					"v.is_holding_firearm_late = math.ceil(v.difference_counter);"
+				],
+				"animate": [
+					"magazine_controller"
+				]
+			},
+			"animations": {
+				"magazine_controller": "controller.animation.magazine_attachables",
+				"right_hand_visible": "animation.magazine_right_hand_visible",
+				"left_hand_visible": "animation.magazine_left_hand_visible",
+				"invisible": "animation.magazine_invisible"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

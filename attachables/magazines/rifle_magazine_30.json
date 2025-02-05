@@ -10,7 +10,7 @@
 				"default": "textures/entity/ak47_texture_new2"
 			},
 			"geometry": {
-				"default": "geometry.weeweejuice.rifle_magazine"
+				"default": "geometry.weeweejuice.rifle_magazine_30"
 			},
 			"scripts": {
 				"initialize": [
