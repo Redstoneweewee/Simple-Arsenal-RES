@@ -943,8 +943,8 @@
 					"pivot": [-6, 15, 1],
 					"locators": {
 						"ak47_muzzle": {
-							"offset": [-6.3, -5.45, -2.575],
-							"rotation": [180, 0, 0]
+							"offset": [-6.025, -5.45, -2.875],
+							"rotation": [90, 0, 0]
 						},
 						"ak47_shell_eject": {
 							"offset": [-6.52855, 10.14645, -3.175],

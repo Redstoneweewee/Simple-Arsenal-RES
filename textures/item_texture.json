@@ -2,6 +2,10 @@
     "resource_pack_name": "vanilla",
     "texture_name": "atlas.items",
     "texture_data": {
+        "money": {
+            "textures": "textures/items/money"
+        },
+
         "ak47": {
             "textures": "textures/items/firearm/ak47"
         },
@@ -14,18 +18,27 @@
         "mk13": {
             "textures": "textures/items/firearm/mk13"
         },
+        "p90": {
+            "textures": "textures/items/firearm/p90"
+        },
         "ump45": {
             "textures": "textures/items/firearm/ump45"
+        },
+        "desert_eagle": {
+            "textures": "textures/items/firearm/desert_eagle"
+        },
+        "remington870": {
+            "textures": "textures/items/firearm/remington870"
         },
 
         "rifle_magazine_30": {
             "textures": "textures/items/magazines/rifle_magazine_30"
         },
-        "rifle_magazine_50": {
-            "textures": "textures/items/magazines/rifle_magazine_50"
-        },
         "rifle_magazine_30_empty": {
             "textures": "textures/items/empty_magazines/rifle_magazine_30_empty"
+        },
+        "rifle_magazine_50": {
+            "textures": "textures/items/magazines/rifle_magazine_50"
         },
         "rifle_magazine_50_empty": {
             "textures": "textures/items/empty_magazines/rifle_magazine_50_empty"
@@ -42,11 +55,23 @@
         "smg_magazine_24_empty": {
             "textures": "textures/items/empty_magazines/smg_magazine_24_empty"
         },
+        "smg_magazine_50": {
+            "textures": "textures/items/magazines/smg_magazine_50"
+        },
+        "smg_magazine_50_empty": {
+            "textures": "textures/items/empty_magazines/smg_magazine_50_empty"
+        },
         "sniper_magazine_3": {
             "textures": "textures/items/magazines/sniper_magazine_3"
         },
         "sniper_magazine_3_empty": {
             "textures": "textures/items/empty_magazines/sniper_magazine_3_empty"
+        },
+        "pistol_magazine_8": {
+            "textures": "textures/items/magazines/pistol_magazine_8"
+        },
+        "pistol_magazine_8_empty": {
+            "textures": "textures/items/empty_magazines/pistol_magazine_8_empty"
         }
     }
 }

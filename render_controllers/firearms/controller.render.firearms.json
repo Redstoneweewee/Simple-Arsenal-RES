@@ -21,9 +21,34 @@
 			"geometry": "Geometry.mk13",
 			"materials": [ { "*": "Material.firearm" } ]
 		},
+		"controller.render.p90": {
+			"textures": [ "Texture.p90" ],
+			"geometry": "Geometry.p90",
+			"materials": [ { "*": "Material.firearm" } ]
+		},
 		"controller.render.ump45": {
 			"textures": [ "Texture.ump45" ],
 			"geometry": "Geometry.ump45",
+			"materials": [ { "*": "Material.firearm" } ]
+		},
+		"controller.render.desert_eagle": {
+			"textures": [ "Texture.desert_eagle" ],
+			"geometry": "Geometry.desert_eagle",
+			"materials": [ { "*": "Material.firearm" } ]
+		},
+		"controller.render.remington870": {
+			"textures": [ "Texture.remington870" ],
+			"geometry": "Geometry.remington870",
+			"materials": [ { "*": "Material.firearm" } ]
+		},
+		"controller.render.rpg7": {
+			"textures": [ "Texture.rpg7" ],
+			"geometry": "Geometry.rpg7",
+			"materials": [ { "*": "Material.firearm" } ]
+		},
+		"controller.render.javelin": {
+			"textures": [ "Texture.javelin" ],
+			"geometry": "Geometry.javelin",
 			"materials": [ { "*": "Material.firearm" } ]
 		}
 	}

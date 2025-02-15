@@ -22,11 +22,6 @@
                 },
                 "initialize": [
                     "variable.test_var = 4;"
-                ],
-                "animate": [
-                    {
-                        "test_movement": "variable.test_var > 0"
-                    }
                 ]
             },
             "animations": {
