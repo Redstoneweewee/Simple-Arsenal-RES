@@ -213,6 +213,33 @@
       },
 
 
+      "firearm.shotgun_reload_magazine_in" : {
+         "max_distance" : 80.0,
+         "sounds" : [
+				{
+            "name": "sounds/reload/shotgun/shotgun_in",
+            "volume" : 1.0
+            }
+         ]
+      },
+      "firearm.shotgun_reload_cock_toward" : {
+         "max_distance" : 80.0,
+         "sounds" : [
+				{
+            "name": "sounds/reload/shotgun/shotgun_cock_toward",
+            "volume" : 1.0
+            }
+         ]
+      },
+      "firearm.shotgun_reload_cock_away" : {
+         "max_distance" : 80.0,
+         "sounds" : [
+				{
+            "name": "sounds/reload/shotgun/shotgun_cock_away",
+            "volume" : 1.0
+            }
+         ]
+      },
 
 
 

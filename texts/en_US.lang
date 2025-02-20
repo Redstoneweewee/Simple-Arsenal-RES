@@ -4,9 +4,5 @@ yes:itemGroup.name.snipers=§e§l<§r§eSimple Arsenal§e§l>§r Snipers!
 yes:itemGroup.name.pistols=§e§l<§r§eSimple Arsenal§e§l>§r Pistols!
 yes:itemGroup.name.shotguns=§e§l<§r§eSimple Arsenal§e§l>§r Shotguns!
 
-yes:itemGroup.name.rifle_magazines=§e§l<§r§eSimple Arsenal§e§l>§r Rifle Magazines!
-yes:itemGroup.name.smg_magazines=§e§l<§r§eSimple Arsenal§e§l>§r SMG Magazines!
-yes:itemGroup.name.sniper_magazines=§e§l<§r§eSimple Arsenal§e§l>§r Sniper Magazines!
-yes:itemGroup.name.pistol_magazines=§e§l<§r§eSimple Arsenal§e§l>§r Pistol Magazines!
-yes:itemGroup.name.shotgun_magazines=§e§l<§r§eSimple Arsenal§e§l>§r Shotgun Magazines!
+yes:itemGroup.name.magazines=§e§l<§r§eSimple Arsenal§e§l>§r Magazines!
 yes:itemGroup.name.empty_magazines=§e§l<§r§eSimple Arsenal§e§l>§r Empty Magazines!
