@@ -4,7 +4,7 @@
         "description": "Simple Arsenal [GIT] - 3D, Easy to Use, \nand Survival Friendly Guns \nYT: §b§lWeeweeJuice (2Development Pack)",
         "name": "!!§e§lSimple Arsenal [GIT]! [RP] (2Development Pack) §r§a[v1.21.0x MC version]",
 		"uuid": "bdd65b41-627d-4d2e-a40e-41e08f596afa",
-        "version": [ 2, 0, 0 ],
+        "version": [ 1, 0, 0 ],
         "min_engine_version": [ 1, 19, 70 ]
     },
     "modules": [
@@ -12,7 +12,13 @@
             "description": "Made by Redstoneweewee",
             "type": "resources",
 			"uuid": "87928d8c-115d-468b-b352-5d3e9996c18f",
-            "version": [ 2, 0, 0 ]
+            "version": [ 1, 0, 0 ]
         }
-    ]
+    ],
+	"dependencies": [
+		{
+			"uuid": "12addba8-7ba8-4c6e-9e2c-48fe275695d5",
+            "version": [ 1, 0, 0 ]
+		}
+	]
 }
