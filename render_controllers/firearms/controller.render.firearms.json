@@ -6,6 +6,16 @@
 			"geometry": "Geometry.ak47",
 			"materials": [ { "*": "Material.firearm" } ]
 		},
+		"controller.render.akm": {
+			"textures": [ "Texture.akm" ],
+			"geometry": "Geometry.akm",
+			"materials": [ { "*": "Material.firearm" } ]
+		},
+		"controller.render.m4a1": {
+			"textures": [ "Texture.m4a1" ],
+			"geometry": "Geometry.m4a1",
+			"materials": [ { "*": "Material.firearm" } ]
+		},
 		"controller.render.ar15": {
 			"textures": [ "Texture.ar15" ],
 			"geometry": "Geometry.ar15",

@@ -9,6 +9,16 @@
         "textures/entity/ak47_texture"
       ]
     },
+    "akm": {
+      "textures": [
+        "textures/entity/akm_texture"
+      ]
+    },
+    "m4a1": {
+      "textures": [
+        "textures/entity/m4a1_texture"
+      ]
+    },
     "ar15": {
       "textures": [
         "textures/entity/ar15_texture"

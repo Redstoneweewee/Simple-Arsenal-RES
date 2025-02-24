@@ -41,8 +41,13 @@
 					"pivot": [-3, 21.5, 0]
 				},
 				{
-					"name": "arm_scope_pivot",
+					"name": "arm_iron_sight_pivot",
 					"parent": "arm_hipfire_pivot",
+					"pivot": [-6, 9.245, -4.33]
+				},
+				{
+					"name": "arm_scope_pivot",
+					"parent": "arm_iron_sight_pivot",
 					"pivot": [-6, 9.245, -5.115]
 				},
 				{

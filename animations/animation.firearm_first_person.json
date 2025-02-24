@@ -1,7 +1,7 @@
 {
 	"format_version": "1.8.0",
 	"animations": {
-		"animation.rifle_aim_acog_first_person": {
+		"animation.m4a1_aim_iron_sight_first_person": {
 			"loop": "hold_on_last_frame",
 			"animation_length": 0.25,
 			"override_previous_animation": true,
@@ -9,17 +9,14 @@
 				"movement": {
 					"rotation": {
 						"0.0": [-10.00924, 61.36743, -51.7],
-						"0.12": [-8.55, 61.37, -51.7],
-						"0.25": [-3.909, 61.36743, -51.7]
+						"0.11": [-6.50924, 61.36743, -51.7],
+						"0.25": [-7.50924, 61.36743, -51.7]
 					},
 					"position": {
-						"0.0": [-18.92958, 15.43689, -6.57071],
-						"0.11": [-18.8, 15.3, -6.58],
-						"0.25": [-18.466, 14.965, -6.61]
+						"0.0": [-18.6094, 15.51283, -6.42984],
+						"0.2": [-17.07605, 13.76495, -6.65988],
+						"0.25": [-17.07605, 13.76495, -6.65988]
 					}
-				},
-				"arm_scope_pivot": {
-					"rotation": [0, "30*(v.movement_direction_value)", 0]
 				},
 				"leftArm_custom": {
 					"rotation": [3.15426, 4.95712, "27.5283207963+v.tcos02/160"],
@@ -28,6 +25,13 @@
 				"rightArm_custom": {
 					"rotation": [0, 0, "v.tcos02/160"],
 					"position": [0, "-v.tcos0/240", 0]
+				},
+				"arm_scope_pivot": {
+					"position": [0, 0, 0.5]
+				},
+				"arm_iron_sight_pivot": {
+					"rotation": ["3.36+math.abs(0.5*(v.movement_direction_value))", "1.96+30*(v.movement_direction_value)", "0.06+2*(v.movement_direction_value)"],
+					"position": [0.003, 0.526, -0.898]
 				}
 			}
 		},
@@ -49,7 +53,8 @@
 					}
 				},
 				"arm_scope_pivot": {
-					"rotation": [0, "30*(v.movement_direction_value)", 0]
+					"rotation": [0.272, "30*(v.movement_direction_value)", 0],
+					"position": [0, 0, 0]
 				},
 				"leftArm_custom": {
 					"rotation": [3.15426, 4.95712, "27.5283207963+v.tcos02/160"],
@@ -58,35 +63,6 @@
 				"rightArm_custom": {
 					"rotation": [0, 0, "v.tcos02/160"],
 					"position": [0, "-v.tcos0/240", 0]
-				}
-			}
-		},
-		"animation.rifle_aim_sniper_scope_first_person": {
-			"loop": "hold_on_last_frame",
-			"animation_length": 0.25,
-			"override_previous_animation": true,
-			"bones": {
-				"movement": {
-					"rotation": {
-						"0.0": [-7.50924, 61.36743, -51.7],
-						"0.25": [-3.909, 61.36743, -51.7]
-					},
-					"position": {
-						"0.0": [-25.28253, 21.26177, -6.22468],
-						"0.1": [-25.25, 21.19, -6.24],
-						"0.25": [-25.045, 20.829, -6.32]
-					}
-				},
-				"arm_scope_pivot": {
-					"rotation": [0, "8*(v.movement_direction_value)", 0]
-				},
-				"leftArm_custom": {
-					"rotation": [3.15426, 4.95712, 27.52832],
-					"position": [-7.61122, -8.4365, -0.42207]
-				},
-				"rightArm_custom": {
-					"rotation": [0, 0, 0],
-					"position": [0, 0, 0]
 				}
 			}
 		},
@@ -868,36 +844,6 @@
 				"rightArm_custom": {
 					"rotation": ["(math.cos(query.life_time * 75) * 1.4325)-v.tcos0_fast/200", 0, 0],
 					"position": ["-v.tcos02_fast/400", "-3-v.tcos0_fast/400", 0]
-				}
-			}
-		},
-		"animation.pistol_aim_red_dot_scope_first_person": {
-			"loop": "hold_on_last_frame",
-			"animation_length": 0.25,
-			"override_previous_animation": true,
-			"bones": {
-				"movement": {
-					"rotation": {
-						"0.0": [-10.00924, 61.36743, -51.7],
-						"0.11": [-6.50924, 61.36743, -51.7],
-						"0.25": [-7.50924, 61.36743, -51.7]
-					},
-					"position": {
-						"0.0": [-18.6094, 15.51283, -6.42984],
-						"0.2": [-17.07605, 13.76495, -6.65988],
-						"0.25": [-17.07605, 13.76495, -6.65988]
-					}
-				},
-				"arm_scope_pivot": {
-					"rotation": [0, "30*(v.movement_direction_value)", 0]
-				},
-				"leftArm_custom": {
-					"rotation": [3.15426, 4.95712, "27.5283207963+v.tcos02/160"],
-					"position": [-7.33096, "-1.8929-v.tcos0/240", -0.71121]
-				},
-				"rightArm_custom": {
-					"rotation": [0, 0, "v.tcos02/160"],
-					"position": [0, "-v.tcos0/240", 0]
 				}
 			}
 		},
@@ -1880,36 +1826,6 @@
 				}
 			}
 		},
-		"animation.pistol_aim_acog_first_person": {
-			"loop": "hold_on_last_frame",
-			"animation_length": 0.25,
-			"override_previous_animation": true,
-			"bones": {
-				"movement": {
-					"rotation": {
-						"0.0": [-10.00924, 61.36743, -51.7],
-						"0.12": [-8.55, 61.37, -51.7],
-						"0.25": [-3.909, 61.36743, -51.7]
-					},
-					"position": {
-						"0.0": [-18.92958, 15.43689, -6.57071],
-						"0.11": [-18.8, 15.3, -6.58],
-						"0.25": [-18.466, 14.965, -6.61]
-					}
-				},
-				"arm_scope_pivot": {
-					"rotation": [0, "30*(v.movement_direction_value)", 0]
-				},
-				"leftArm_custom": {
-					"rotation": [3.15426, 4.95712, "27.5283207963+v.tcos02/160"],
-					"position": [-7.61122, "-1.6865-v.tcos0/240", -0.42207]
-				},
-				"rightArm_custom": {
-					"rotation": [0, 0, "v.tcos02/160"],
-					"position": [0, "-v.tcos0/240", 0]
-				}
-			}
-		},
 		"animation.shotgun_hold_run_first_person": {
 			"loop": "hold_on_last_frame",
 			"animation_length": 0.25,
@@ -2311,6 +2227,159 @@
 				},
 				"magazine_new": {
 					"scale": 0
+				}
+			}
+		},
+		"animation.akm_aim_iron_sight_first_person": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.25,
+			"override_previous_animation": true,
+			"bones": {
+				"movement": {
+					"rotation": {
+						"0.0": [-10.00924, 61.36743, -51.7],
+						"0.11": [-6.50924, 61.36743, -51.7],
+						"0.25": [-7.50924, 61.36743, -51.7]
+					},
+					"position": {
+						"0.0": [-18.6094, 15.51283, -6.42984],
+						"0.2": [-17.07605, 13.76495, -6.65988],
+						"0.25": [-17.07605, 13.76495, -6.65988]
+					}
+				},
+				"leftArm_custom": {
+					"rotation": [3.15426, 4.95712, "27.5283207963+v.tcos02/160"],
+					"position": [-7.61122, "-8.4364971011-v.tcos0/240", -0.42207]
+				},
+				"rightArm_custom": {
+					"rotation": [0, 0, "v.tcos02/160"],
+					"position": [0, "-v.tcos0/240", 0]
+				},
+				"arm_scope_pivot": {
+					"position": [0, 0, "q.equipped_item_any_tag('slot.weapon.mainhand', 'yes:m4a1') ? 0.5 : 0"]
+				},
+				"arm_iron_sight_pivot": {
+					"rotation": ["4+math.abs(0.5*(v.movement_direction_value))", "30*(v.movement_direction_value)", "-0.1+2*(v.movement_direction_value)"],
+					"position": [0.003, 0.526, -0.882]
+				}
+			}
+		},
+		"animation.rifle_aim_acog_first_person": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.25,
+			"override_previous_animation": true,
+			"bones": {
+				"movement": {
+					"rotation": {
+						"0.0": [-10.00924, 61.36743, -51.7],
+						"0.12": [-8.55, 61.37, -51.7],
+						"0.25": [-3.909, 61.36743, -51.7]
+					},
+					"position": {
+						"0.0": [-18.92958, 15.43689, -6.57071],
+						"0.11": [-18.8, 15.3, -6.58],
+						"0.25": [-18.466, 14.965, -6.61]
+					}
+				},
+				"arm_scope_pivot": {
+					"rotation": [0, "30*(v.movement_direction_value)", 0]
+				},
+				"leftArm_custom": {
+					"rotation": [3.15426, 4.95712, "27.5283207963+v.tcos02/160"],
+					"position": [-7.61122, "-8.4364971011-v.tcos0/240", -0.42207]
+				},
+				"rightArm_custom": {
+					"rotation": [0, 0, "v.tcos02/160"],
+					"position": [0, "-v.tcos0/240", 0]
+				}
+			}
+		},
+		"animation.rifle_aim_sniper_scope_first_person": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.25,
+			"override_previous_animation": true,
+			"bones": {
+				"movement": {
+					"rotation": {
+						"0.0": [-7.50924, 61.36743, -51.7],
+						"0.25": [-3.909, 61.36743, -51.7]
+					},
+					"position": {
+						"0.0": [-25.28253, 21.26177, -6.22468],
+						"0.1": [-25.25, 21.19, -6.24],
+						"0.25": [-25.045, 20.829, -6.32]
+					}
+				},
+				"arm_scope_pivot": {
+					"rotation": [0, "8*(v.movement_direction_value)", 0]
+				},
+				"leftArm_custom": {
+					"rotation": [3.15426, 4.95712, 27.52832],
+					"position": [-7.61122, -8.4365, -0.42207]
+				},
+				"rightArm_custom": {
+					"rotation": [0, 0, 0],
+					"position": [0, 0, 0]
+				}
+			}
+		},
+		"animation.pistol_aim_red_dot_scope_first_person": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.25,
+			"override_previous_animation": true,
+			"bones": {
+				"movement": {
+					"rotation": {
+						"0.0": [-10.00924, 61.36743, -51.7],
+						"0.11": [-6.50924, 61.36743, -51.7],
+						"0.25": [-7.50924, 61.36743, -51.7]
+					},
+					"position": {
+						"0.0": [-18.6094, 15.51283, -6.42984],
+						"0.2": [-17.07605, 13.76495, -6.65988],
+						"0.25": [-17.07605, 13.76495, -6.65988]
+					}
+				},
+				"arm_scope_pivot": {
+					"rotation": [0.3, "30*(v.movement_direction_value)", 0]
+				},
+				"leftArm_custom": {
+					"rotation": [3.15426, 4.95712, "27.5283207963+v.tcos02/160"],
+					"position": [-7.33096, "-1.8929-v.tcos0/240", -0.71121]
+				},
+				"rightArm_custom": {
+					"rotation": [0, 0, "v.tcos02/160"],
+					"position": [0, "-v.tcos0/240", 0]
+				}
+			}
+		},
+		"animation.pistol_aim_acog_first_person": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.25,
+			"override_previous_animation": true,
+			"bones": {
+				"movement": {
+					"rotation": {
+						"0.0": [-10.00924, 61.36743, -51.7],
+						"0.12": [-8.55, 61.37, -51.7],
+						"0.25": [-3.909, 61.36743, -51.7]
+					},
+					"position": {
+						"0.0": [-18.92958, 15.43689, -6.57071],
+						"0.11": [-18.8, 15.3, -6.58],
+						"0.25": [-18.466, 14.965, -6.61]
+					}
+				},
+				"arm_scope_pivot": {
+					"rotation": [0.3, "30*(v.movement_direction_value)", 0]
+				},
+				"leftArm_custom": {
+					"rotation": [3.15426, 4.95712, "27.5283207963+v.tcos02/160"],
+					"position": [-7.61122, "-1.6865-v.tcos0/240", -0.42207]
+				},
+				"rightArm_custom": {
+					"rotation": [0, 0, "v.tcos02/160"],
+					"position": [0, "-v.tcos0/240", 0]
 				}
 			}
 		}
